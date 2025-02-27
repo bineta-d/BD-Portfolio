@@ -6,10 +6,13 @@ import { Container } from "react-bootstrap";
 
 export const Projects = () =>{
     return (<div className="holder">
-      <div className="projects-content">
-    <div className="title">
-      <h2 className="fw-bold" style={{ fontSize: '4rem'}}>Projects</h2></div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam molestiae facilis harum eaque? Commodi magni tempora at nihil adipisci! Perspiciatis, aliquam natus vero alias cumque iure fugit consectetur! Numquam, distinctio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil possimus tempora debitis ea exercitationem vitae soluta distinctio quidem, ut officiis consequuntur officia cupiditate voluptatibus quo accusamus rerum ex? Quis.</p>
+    <div className="projects-content pt-5 text-center">
+      <Container fluid style={{ backgroundColor: "#F5FBFF" }} >
+
+        <div className="title">
+           <h2 className="fw-bold" style={{ fontSize: '4rem'}}>Projects</h2>
+          </div>
+      </Container>
     </div>
      
 

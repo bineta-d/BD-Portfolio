@@ -5,19 +5,33 @@
 }
 body {
   font-family: 'Nanum Gothic Coding', 'Radio Canada Big', sans-serif;
-  font-size: 18px;
+  /* font-size: 18px; */
   position: relative;
   margin: 0;
   overflow-x: hidden;
 
 }
 
+
+
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Radio Canada Big', sans-serif;
+  /* font-family: 'Radio Canada Big', sans-serif; */
+  font-family: "Saira", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
+.title{
+  font-size: 3.5rem  ;
+  font-weight: 600;
+  width: 100%;
+}
 p {
-  font-size: 1.2rem;
+  font-size: 1.7rem ;
 }
 
 .navbar-brand, .nav-link {
@@ -64,7 +78,6 @@ p {
 .holder{
   /* background-color: #FF69B4	; */
 
-  margin:0;
 }
 
 .hero-content {
@@ -78,6 +91,17 @@ p {
   object-fit: cover;
   border-radius: 50%;
   border: 15px white solid; 
+}
+
+.profile-img{
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 15px solid white;
+    display: block;
+    margin: 0 auto;
+  
 }
 .holder button{
   color: black;
@@ -95,7 +119,7 @@ p {
 }
 .orgs img{
   height: 200px;
-  width: 275px;
+  width: 270px;
 }
 
 .icons img{
@@ -104,4 +128,25 @@ p {
   border: black solid 2px;
   margin-left: 20px;
   background-size: cover;
+  border-radius: 50%;
+}
+
+
+#skill {
+  width: 200px;
+  height: 200px;
+  text-shadow: black 2px 2px;
+}
+
+.skills-grid h4{
+  font-size: 2.5rem;
+}
+
+.skills-grid div{
+  /* margin-bottom: 5rem; */
+}
+
+
+.holder{
+  /* background-color: red; */
 }

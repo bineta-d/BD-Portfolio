@@ -9,7 +9,7 @@ import About from "./components/About"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
-import More from "./components/More";
+import Affiliations from "./components/Affiliations";
 
 
 
@@ -19,10 +19,7 @@ const App = () => {
     <Helmet>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
       </Helmet>
 
       <Navbar expand="lg" bg="dark" variant="dark" fixed="top" className="hstack gap-3">
@@ -55,7 +52,6 @@ const App = () => {
 
       <div fluid className="section text-center" id="skills">
       <Skills/>
-      <hr/>
       </div>
 
       <div fluid className="section text-center" id="projects">
@@ -69,7 +65,7 @@ const App = () => {
       </div>
 
       <div fluid className="section text-center" id="more">
-      <More/>
+      <Affiliations/>
       </div>
 
       
