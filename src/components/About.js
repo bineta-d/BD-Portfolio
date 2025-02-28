@@ -27,7 +27,7 @@ export const About = () => {
       {/* About Section */}
       <div className="about-content pt-5 text-center" style={{ backgroundColor: "#F5FBFF" }}>
         <Container fluid style={{ backgroundColor: "#F5FBFF" }} >
-          <h2 className="fw-bold text-center" style={{ fontSize: "4rem",backgroundColor:"red" }}>About</h2>
+          <h2 className="fw-bold text-center" style={{ fontSize: "4rem"}}>About</h2>
 
           <Row className="align-items-center justify-content-center mt-1">
             {/* Profile Image & Social Icons */}
