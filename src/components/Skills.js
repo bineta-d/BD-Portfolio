@@ -6,17 +6,17 @@ import "../App.css";
 import { Container } from "react-bootstrap";
 
 export const Skills = () =>{
-    return (<div className="holder p-5 pb-0">
+    return (<div className="holder px-5 pb-0 ">
     <div className="skills-content" id="skills-content">
-    <div className="title " id="skills-title">
+    <div className="title" id="skills-title">
       <h2 className="fw-bold" style={{ fontSize: '4rem'}}>Skills</h2></div>
-      <p className="mb-5">I'm dedicated to continuous learning & listed below are some of my skills: </p>
+      <p className="mb-5" style={{ fontWeight: '600'}}>I'm dedicated to continuous learning & listed below are some of my skills: </p>
     </div>
 {/* ---------------------------------------------------------- */}
-    <div className="skills-grid row justify-content-end" >
+    <div className="skills-grid row justify-content-center" >
       {/* <div className="container"> */}
       <div className="col-md-4">
-        <span><img src="java-icon.webp" alt="" class="image-fluid" id="skill"/></span>
+        <span ><img src="java-icon.webp" alt="" class="image-fluid" id="skill"/></span>
         <h4>Java</h4>
       </div>
 
@@ -53,7 +53,7 @@ export const Skills = () =>{
         <h4>MySQL</h4>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-4 ">
         <span><img src="tw-icon.png" alt="" class="image-fluid" id="skill"/></span>
         <h4>Tailwind CSS</h4>
 
