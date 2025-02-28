@@ -120,7 +120,7 @@ const ProjectCard = ({ project }) => {
               transition: "max-height 0.3s ease-in-out",
             }}
           >
-            <p className="px-5" style={{ fontSize: "1.3rem", color: "black" }}>{project.details}</p>
+            <p className="px-2" style={{ fontSize: "1.3rem", color: "black" }}>{project.details}</p>
           </div>
           <div className="col">
           <button
