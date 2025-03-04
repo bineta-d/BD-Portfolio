@@ -9,7 +9,6 @@ body {
   position: relative;
   margin: 0;
   overflow-x: hidden;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,6 +19,8 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+  transform: scale(0.8);
+
 }
 
 .title{
@@ -112,6 +113,8 @@ p {
     margin: 0 auto;
   
 }
+.holder{
+}
 .holder button{
   color: black;
   height: 7rem;
@@ -141,8 +144,6 @@ p {
 }
 
 
-
-
 #skill {
   width: 200px;
   height: 200px;
@@ -153,19 +154,7 @@ p {
   font-size: 2.5rem;
 }
 
-.skills-grid div{
-  /* margin-bottom: 5rem; */
-}
 
-/* .btn-link {
-  padding: 0 !important;
-  margin: 0 !important;
-  line-height: 1 !important;
-  font-size: inherit !important;
-} */
-.holder{
-  /* background-color: red; */
-}
 .col-md-4 {
   margin-top: 20px;
 }
