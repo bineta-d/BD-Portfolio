@@ -17,7 +17,7 @@ export const Footer = () => {
         marginBottom: '60px', 
       }}>
         <Container fluid >
-          <Row className="d-flex justify-content-center align-items-center text center">
+          <Row className="d-flex justify-content-center align-items-center text-center">
             <Col className="d-flex justify-content-center align-items-center">
               <div style={{
                 width: '50px',
@@ -28,7 +28,7 @@ export const Footer = () => {
               }}>
             
               </div>
-              <p style={{ fontSize: '1.2rem' }}>Bineta Diatta &copy; {new Date().getFullYear()}</p>
+              <p style={{ fontSize: '1.2rem', color: 'white' }}>Bineta Diatta &copy; {new Date().getFullYear()}</p>
             </Col>
           </Row>
         </Container>

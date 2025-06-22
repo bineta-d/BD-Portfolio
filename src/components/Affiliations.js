@@ -1,43 +1,29 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
+import "../App.css";
 
-export const Affiliations = () => {
-  const affiliations = [
-    { src: "/mlt-logo.png", alt: "MLT" },
-    {src: "gwc.png" , alt: "Girls Who Code"},
-    { src: "/rtc-logo.avif", alt: "RTC" },
-    { src: "/init-logo-1.webp", alt: "INIT" },
-    { src: "/colorstack-logo.png", alt: "ColorStack" },
-    { src: "./nsbe-logo.png", alt: "NSBE" },
-    {src: "codepath-logo.png" , alt: "Society of Women Engineers"},
-    { src: "./wics-logo.png", alt: "WiCS" },
-    {src: "SWE-logo.jpg" , alt: "Society of Women Engineers"}
+// Affiliations images (add or update paths as needed)
+const affiliations = [
+  { src: "nsbe-logo.png", alt: "NSBE" },
+  { src: "wics-logo.png", alt: "WiCS" },
+  { src: "init-logo-1.webp", alt: "INIT" },
+  { src: "fiu-logo-3.png", alt: "FIU" },
+  { src: "mlt-logo.png", alt: "MLT" },
+  { src: "rtc-logo.avif", alt: "RTC" },
+  { src: "colorstack-logo.png", alt: "ColorStack" },
+];
 
-  ]
+const Affiliations = () => {
   return (
-    <div className="holder p-5 pb-0">
-      <div className="affils-content">
-        <div className="title">
-          <h2 className="fw-bold" style={{ fontSize: '4rem' }}>Affiliations</h2>
+    <div className="affiliations-section">
+      <h2 className="fw-bold text-center" style={{ fontSize: "2.2rem", marginBottom: "1.2rem" }}>Affiliations</h2>
+      <div className="affiliations-carousel-wrapper">
+        <div className="affiliations-carousel">
+          {[...affiliations, ...affiliations].map((affil, idx) => (
+            <div className="affiliation-icon" key={idx}>
+              <img src={affil.src} alt={affil.alt} className="affiliation-img" />
+            </div>
+          ))}
         </div>
-        <Container className="pt-3 justify-content-between">
-          <Row className="justify-content-center pb-5">
-            {affiliations.map((org, index) => (
-              <Col key={index} md={4} sm={6} xs={12} className="mb-4 d-flex justify-content-center p-2" style={{backgroundColor:""}}>
-                <img
-                  src={org.src}
-                  alt={org.alt}
-                  className="img-fluid org-logo"
-                  style= {{width:"225px",
-                  height:"210px"
-                   }}          />
-              </Col>
-            ))}
-
-           
-          </Row>
-        </Container>
       </div>
     </div>
   );
