@@ -15,7 +15,7 @@ export const Footer = () => {
         padding: '2rem',
         position: 'relative',
         marginBottom: '60px', 
-        textAlign: 'center', // Center align all footer content
+        textAlign: 'center', 
       }}>
         <Container fluid>
           <Row className="d-flex justify-content-center align-items-center text-center">
