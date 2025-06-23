@@ -107,7 +107,7 @@ export const Projects = () => {
 	};
 
 	return (
-		<div id="projects-section" className="holder" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+		<div id="projects-section" className="holder" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '2vw', marginRight: '2vw', boxSizing: 'border-box' }}>
 			<div className="projects-content pt-3 text-center" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 				<Container fluid style={{ backgroundColor: "#F5FBFF", display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="p-5 ">
 					<div className="title" style={{ width: '100%', textAlign: 'center' }}>
@@ -122,7 +122,7 @@ export const Projects = () => {
 						justifyContent: 'center',
 						alignItems: 'center',
 						maxWidth: '1600px',
-						margin: '0 auto',
+						margin: '5% auto',
 						width: '100%',
 					}}>
 						{projectData.map((project) => (
