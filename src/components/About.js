@@ -50,7 +50,7 @@ export const About = () => {
             <Nav.Link as={Link} to="experience-title" smooth={true} duration={600} offset={-70}>
               <button type ="button" className="learn-more-btn" data-bs-toggle="button">Experience</button>
             </Nav.Link>
-            <Nav.Link href="/BD-Resume-2025.pdf" download="BD-Resume-2025.pdf" className="text-decoration-none">
+            <Nav.Link href="/BD-Resume-25.pdf" download className="text-decoration-none">
               <button type="button" className="learn-more-btn" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
                 Resume <IoDownloadOutline size={24} style={{marginLeft: '8px'}} />
               </button>
