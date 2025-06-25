@@ -90,24 +90,8 @@ export const Projects = () => {
 		setActiveProject(null);
 	};
 
-	const getGridTemplateColumns = () => {
-		if (typeof window !== 'undefined' && window.innerWidth < 900) {
-			return '1fr';
-		}
-		return 'repeat(3, 1fr)';
-	};
-
-	const scrollToProjects = () => {
-		const projectsSection = document.getElementById('projects-section');
-		if (projectsSection) {
-			const yOffset = -145;
-			const y = projectsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-			window.scrollTo({ top: y, behavior: 'smooth' });
-		}
-	};
-
 	return (
-		<div id="projects-section" className="holder" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '2vw', marginRight: '2vw', boxSizing: 'border-box' }}>
+		<div id="projects-section" className="holder" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
 			<div className="projects-content pt-3 text-center" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 				<Container fluid style={{ backgroundColor: "#F5FBFF", display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="p-5 ">
 					<div className="title" style={{ width: '100%', textAlign: 'center' }}>
@@ -115,36 +99,22 @@ export const Projects = () => {
 						<p className="mb-0" style={{ marginBottom: '2.5rem' }}>Listed below are several personal and academic projects:</p>
 					</div>
 
-					<Row className="project-row m-5 mt-0" style={{
+					<div className="project-row" style={{
 						display: 'grid',
-						gridTemplateColumns: getGridTemplateColumns(),
+						gridTemplateColumns: 'repeat(3, 1fr)',
 						gap: '2.5rem',
 						justifyContent: 'center',
 						alignItems: 'center',
-						maxWidth: '1600px',
-						margin: '5% auto',
+						maxWidth: '1200px',
+						margin: '0 auto',
 						width: '100%',
 					}}>
 						{projectData.map((project) => (
-							<div key={project.id} style={{
-								background: '#fff',
-								borderRadius: '2.5rem',
-								boxShadow: '0 4px 32px rgba(0,0,0,0.10)',
-								padding: '2.5rem 2rem 2rem 2rem',
-								display: 'flex',
-								flexDirection: 'column',
-								alignItems: 'center',
-								justifyContent: 'space-between',
-								minHeight: '520px',
-								maxWidth: '480px',
-								width: window.innerWidth < 900 ? '90vw' : '100%',
-								margin: '0 auto',
-								boxSizing: 'border-box',
-								transition: 'transform 0.2s',
-							}}>
+							<div key={project.id} className="project-card">
 								<img
 									src={project.image}
 									alt={project.title}
+									className="project-image"
 									style={{
 										width: '100%',
 										maxWidth: '340px',
@@ -224,8 +194,6 @@ export const Projects = () => {
 											transition: 'background 0.2s',
 											textDecoration: 'none',
 											margin: 0,
-											width: window.innerWidth < 900 ? '65vw' : undefined,
-											maxWidth: window.innerWidth < 900 ? '65vw' : undefined,
 										}}
 										onClick={() => handleShowModal(project)}
 										onMouseOver={e => e.currentTarget.style.background = '#333'}
@@ -236,7 +204,7 @@ export const Projects = () => {
 								</div>
 							</div>
 						))}
-					</Row>
+					</div>
 
 					<Modal show={showModal} onHide={handleCloseModal} size="lg" centered dialogClassName="custom-modal-responsive">
 						{activeProject && (

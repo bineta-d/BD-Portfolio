@@ -19,8 +19,8 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-  transform: scale(0.8);
-
+  /* transform: scale(0.8); */
+  font-size: 1.6em; /* Responsive replacement for scale */
 }
 
 .title{
@@ -84,7 +84,7 @@ p {
   background-size: cover;
   min-height: 100vh; 
   padding-top:50px;
-  width: 100vw;
+  width: 100%; /* was 100vw, now responsive */
   color: white; 
   display: flex;
   justify-content: center;
@@ -116,7 +116,8 @@ p {
 .hero-content {
   z-index: 2;
   padding: 20px;
-transform: scale(1.1);
+  /* transform: scale(1.1); */
+  font-size: 1.1em; /* Responsive replacement for scale */
 }
 .hero-content h1 {
   margin-bottom: 0.7rem;
@@ -190,7 +191,8 @@ transform: scale(1.1);
   justify-content: center;
   align-items: center;
   margin: 0 auto 1.2rem auto;
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
+  font-size: 0.95em; /* Responsive replacement for scale */
   max-width: 100%;
 }
 
@@ -216,7 +218,8 @@ transform: scale(1.1);
 
 @media (max-width: 600px) {
   .profile.responsive-profile {
-    transform: scale(0.62);
+    /* transform: scale(0.62); */
+    font-size: 0.85em; /* Responsive replacement for scale */
     margin-bottom: 0.7rem;
   }
   .profile-img-responsive {
@@ -239,8 +242,8 @@ transform: scale(1.1);
 
 }
 .orgs{
-  min-width: 100vw;
-  min-width:fit-content
+  min-width: 100%; /* was 100vw, now responsive */
+  min-width:fit-content;
   /* background-color: red; */
 }
 .orgs img{
@@ -283,7 +286,7 @@ transform: scale(1.1);
 }
 
 .skills-carousel-wrapper {
-  width: 100vw;
+  width: 100%; /* was 100vw, now responsive */
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 0 !important;
@@ -434,7 +437,7 @@ transform: scale(1.1);
     gap: 0.5rem;
     max-width: 99vw;
     align-items: stretch !important;
-    width: 100vw;
+    width: 100%; /* was 100vw, now responsive */
     overflow-x: hidden;
   }
 }
@@ -495,7 +498,7 @@ transform: scale(1.1);
   color: #fff !important;
   background: #111;
   border-color: #111;
-  transform: scale(1.13);
+  transform: scale(1.08); /* Slightly reduced for less zoom effect */
 }
 
 @media (min-width: 768px) {
@@ -616,7 +619,7 @@ transform: scale(1.1);
   color: #fff !important;
   background: #111;
   border-color: #111;
-  transform: scale(1.13);
+  transform: scale(1.08); /* Slightly reduced for less zoom effect */
 }
 
 @media (min-width: 768px) {
@@ -665,13 +668,13 @@ transform: scale(1.1);
 }
 
 .affiliations-section {
-  width: 100vw;
+  width: 100%; /* was 100vw, now responsive */
   padding: 1.5rem 0 2.5rem 0;
   background: #f8fafc;
 }
 
 .affiliations-carousel-wrapper {
-  width: 100vw;
+  width: 100%; /* was 100vw, now responsive */
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.5rem 0;
@@ -829,6 +832,58 @@ footer p {
   .project-card .card-body {
     align-items: center;
     padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+  }
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .project-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .project-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 2.5rem;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-height: 520px;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transition: transform 0.2s;
+}
+@media (max-width: 900px) {
+  .project-card {
+    min-height: 420px;
+    max-width: 98vw;
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .project-card {
+    min-height: 320px;
+    max-width: 99vw;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
   }
 }
 
