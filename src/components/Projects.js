@@ -108,7 +108,7 @@ export const Projects = () => {
 				<Container fluid style={{ backgroundColor: "#F5FBFF", display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1700px', margin: '0 auto', padding: '0.5rem 1rem 2.5rem 1rem' }}>
 					<div className="title" style={{ width: '100%', textAlign: 'center', marginTop: '0.1rem' }}>
 						<h2 className="projects-title fw-bold mb-2" style={{ fontSize: "clamp(2.2rem, 6vw, 4rem)", marginBottom: '0.5rem', textAlign: 'center' }}>Projects</h2>
-						<p className="mb-0" >Listed below are several personal, academic club projects:</p>
+						<p className="mb-0" >Listed below are several personal, academic and club projects:</p>
 					</div>
 
 					<Row className="project-row mx-0" style={{
