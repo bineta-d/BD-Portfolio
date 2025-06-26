@@ -70,11 +70,9 @@ const App = () => {
     
       </div>
 
-{/* 
       <div fluid className="section text-center" id="contact">
       <Contact/>
-      <hr/>
-      </div> */}
+      </div>
 
       <div fluid className="section text-center" id="more">
       <Affiliations/>

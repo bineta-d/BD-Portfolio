@@ -277,7 +277,7 @@ export const Projects = () => {
 					<Row className="justify-content-center mt-0">
 						<Col xs="auto">
 							<a href="https://github.com/bineta-d" style={{ textDecoration: "none" }} target="_blank">
-								<button type="button" className="btn btn-lg btn-portfolio text-center" data-bs-toggle="button" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+								<button type="button" className="btn btn-lg btn-portfolio text-center" data-bs-toggle="button" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginBottom: 0 }}>
 									View My Github
 								</button>
 							</a>
