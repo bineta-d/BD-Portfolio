@@ -69,6 +69,7 @@ const Contact = () => (
 					gap: "1.5rem",
 					width: "100%",
 				}}
+				className="contact-flex"
 			>
 				<p
 					style={{
@@ -87,7 +88,9 @@ const Contact = () => (
 						gap: "1.2rem",
 						alignItems: "center",
 						marginBottom: 0,
+						marginTop: 0,
 					}}
+					className="contact-icons"
 				>
 					{socials.map((social) => (
 						<a
@@ -127,3 +130,21 @@ const Contact = () => (
 );
 
 export default Contact;
+
+/* Responsive styles for Contact section */
+const style = document.createElement('style');
+style.innerHTML = `
+@media (max-width: 600px) {
+  .contact-flex {
+    flex-direction: column !important;
+    gap: 0.7rem !important;
+    align-items: center !important;
+  }
+  .contact-icons {
+    margin-top: 0.7rem !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+}
+`;
+document.head.appendChild(style);
