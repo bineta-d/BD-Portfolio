@@ -176,14 +176,14 @@ p {
 }
 
 .profile img {
-  width:25rem;
-  height: 25rem;
+  width: 18rem;
+  height: 18rem;
   object-fit: cover;
   border-radius: 50%;
   border: 15px white solid; 
   display: block;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 70%;
 }
 
 .profile.responsive-profile {
@@ -209,10 +209,10 @@ p {
 @media (max-width: 991px) {
   .profile-img,
   .profile-img-responsive {
-    width: 3.92rem;
-    height: 3.92rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border-width: 2.94px;
-    max-width: 13.7vw;
+    max-width: 11vw;
   }
 }
 
@@ -223,7 +223,7 @@ p {
     margin-bottom: 0.7rem;
   }
   .profile-img-responsive {
-    max-width: 7rem;
+    max-width: 5.5rem;
     border-width: 2px;
   }
 }
@@ -799,51 +799,17 @@ footer p {
 #projects{
   width: 100%;
 }
-@media (max-width: 900px) {
-  .project-card {
-    min-height: 180px;
-    max-height: 260px;
-  }
-  .project-card img {
-    width: 120px;
-    height: 120px;
-    margin: 0.7rem;
-  }
-}
-@media (max-width: 600px) {
-  .project-card {
-    flex-direction: column;
-    min-height: 140px;
-    max-height: 360px;
-    border-radius: 1.2rem !important;
-    width: 98vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5rem 0.2rem;
-    align-items: center;
-  }
-  .project-card img {
-    width: 90vw;
-    height: 130px;
-    border-radius: 1.2rem;
-    margin: 0.5rem auto 0.2rem auto;
-    display: block;
-  }
-  .project-card .card-body {
-    align-items: center;
-    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
-  }
-}
-
 .project-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 @media (max-width: 1200px) {
   .project-row {
@@ -851,38 +817,32 @@ footer p {
   }
 }
 @media (max-width: 900px) {
-  .project-row {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  border-radius: 2.5rem;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
-  padding: 2.5rem 2rem 2rem 2rem;
-  min-height: 520px;
-  max-width: 480px;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  transition: transform 0.2s;
-}
-@media (max-width: 900px) {
   .project-card {
-    min-height: 420px;
-    max-width: 98vw;
-    padding: 2rem 1rem 1.5rem 1rem;
+    min-height: unset !important;
+    max-height: unset !important;
+    height: auto !important;
   }
 }
 @media (max-width: 600px) {
   .project-card {
-    min-height: 320px;
-    max-width: 99vw;
+    min-height: unset !important;
+    max-height: unset !important;
+    height: auto !important;
+  }
+}
+@media (max-width: 600px) {
+  .project-row {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .project-card {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    border-radius: 1.2rem !important;
+    min-height: unset !important;
+    height: auto !important;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1.2rem 0.5rem 1rem 0.5rem;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Container, Row, Col, Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -80,6 +80,18 @@ const projectData = [
 export const Projects = () => {
 	const [showModal, setShowModal] = useState(false);
 	const [activeProject, setActiveProject] = useState(null);
+	const [columns, setColumns] = useState(3);
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth < 700) setColumns(1);
+			else if (window.innerWidth < 1100) setColumns(2);
+			else setColumns(3);
+		};
+		handleResize();
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
 
 	const handleShowModal = (project) => {
 		setActiveProject(project);
@@ -91,30 +103,46 @@ export const Projects = () => {
 	};
 
 	return (
-		<div id="projects-section" className="holder" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
+		<section id="projects-section" style={{ background: '#F5FBFF', width: '100%', padding: '0 0 1rem 0' }}>
 			<div className="projects-content pt-3 text-center" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-				<Container fluid style={{ backgroundColor: "#F5FBFF", display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="p-5 ">
-					<div className="title" style={{ width: '100%', textAlign: 'center' }}>
-						<h2 className="projects-title fw-bold mb-4" style={{ fontSize: "4rem", marginBottom: '2.5rem', textAlign: 'center' }}>Projects</h2>
-						<p className="mb-0" style={{ marginBottom: '2.5rem' }}>Listed below are several personal and academic projects:</p>
+				<Container fluid style={{ backgroundColor: "#F5FBFF", display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1700px', margin: '0 auto', padding: '0.5rem 1rem 2.5rem 1rem' }}>
+					<div className="title" style={{ width: '100%', textAlign: 'center', marginTop: '0.1rem' }}>
+						<h2 className="projects-title fw-bold mb-2" style={{ fontSize: "clamp(2.2rem, 6vw, 4rem)", marginBottom: '0.5rem', textAlign: 'center' }}>Projects</h2>
+						<p className="mb-0" >Listed below are several personal, academic club projects:</p>
 					</div>
 
-					<div className="project-row" style={{
+					<Row className="project-row mx-0" style={{
 						display: 'grid',
-						gridTemplateColumns: 'repeat(3, 1fr)',
+						gridTemplateColumns: `repeat(${columns}, 1fr)`,
 						gap: '2.5rem',
 						justifyContent: 'center',
-						alignItems: 'center',
-						maxWidth: '1200px',
-						margin: '0 auto',
-						width: '100%',
+						alignItems: 'stretch',
+						maxWidth: '1400px',
+						margin: '0 auto 0 auto',
+						width: '90%',
+						transform: 'scale(0.92)',
+						transition: 'transform 0.3s',
 					}}>
 						{projectData.map((project) => (
-							<div key={project.id} className="project-card">
+							<div key={project.id} style={{
+								background: '#fff',
+								borderRadius: '2.5rem',
+								boxShadow: '0 4px 32px rgba(0,0,0,0.10)',
+								padding: '2.5rem 2rem 2rem 2rem',
+								display: 'flex',
+								flexDirection: 'column',
+								alignItems: 'center',
+								justifyContent: 'space-between',
+								minHeight: '520px',
+								maxWidth: '480px',
+								width: '100%',
+								margin: '0 auto',
+								boxSizing: 'border-box',
+								transition: 'transform 0.2s',
+							}}>
 								<img
 									src={project.image}
 									alt={project.title}
-									className="project-image"
 									style={{
 										width: '100%',
 										maxWidth: '340px',
@@ -149,7 +177,7 @@ export const Projects = () => {
 										alignItems: 'center',
 										width: '100%',
 										marginTop: '0.5rem',
-										flexDirection: window.innerWidth < 900 ? 'column' : 'row',
+										flexDirection: columns === 1 ? 'column' : 'row',
 									}}
 								>
 									<a
@@ -194,6 +222,8 @@ export const Projects = () => {
 											transition: 'background 0.2s',
 											textDecoration: 'none',
 											margin: 0,
+											width: columns === 1 ? '65vw' : undefined,
+											maxWidth: columns === 1 ? '65vw' : undefined,
 										}}
 										onClick={() => handleShowModal(project)}
 										onMouseOver={e => e.currentTarget.style.background = '#333'}
@@ -204,7 +234,7 @@ export const Projects = () => {
 								</div>
 							</div>
 						))}
-					</div>
+					</Row>
 
 					<Modal show={showModal} onHide={handleCloseModal} size="lg" centered dialogClassName="custom-modal-responsive">
 						{activeProject && (
@@ -217,14 +247,14 @@ export const Projects = () => {
 									flexDirection: 'column',
 									alignItems: 'center',
 									justifyContent: 'center',
-									padding: window.innerWidth < 600 ? '1.2rem' : '2.5rem',
+									padding: columns === 1 ? '4vw 2vw' : '5vw 6vw',
 									width: '100%',
 									maxWidth: '100%',
 									boxSizing: 'border-box',
 									textAlign: 'center',
 									margin: '0 auto',
 								}}>
-									<img src={activeProject.image} alt={activeProject.title} style={{ width: window.innerWidth < 600 ? '90vw' : '100%', maxWidth: window.innerWidth < 600 ? '320px' : '420px', height: window.innerWidth < 600 ? '160px' : '260px', objectFit: 'cover', borderRadius: '1.5rem', marginBottom: '1.2rem', background: '#f5f5f5' }} />
+									<img src={activeProject.image} alt={activeProject.title} style={{ width: columns === 1 ? '90vw' : '100%', maxWidth: columns === 1 ? '320px' : '420px', height: columns === 1 ? '160px' : '260px', objectFit: 'cover', borderRadius: '1.5rem', marginBottom: '1.2rem', background: '#f5f5f5' }} />
 									{activeProject.details.split(/\n|\n/).map((line, idx) => {
 										if (line.trim().toLowerCase().startsWith('live site:')) {
 											const url = line.split('Live Site:')[1].trim();
@@ -237,14 +267,14 @@ export const Projects = () => {
 										if (line.trim().toLowerCase().startsWith('tech stack:')) {
 											return <div key={idx} style={{ fontWeight: 'bold', marginTop: '1.2em', width: '100%', textAlign: 'center' }}>{line}</div>;
 										}
-										return <p key={idx} style={{ fontSize: window.innerWidth < 600 ? '1rem' : '1.25rem', color: '#333', textAlign: 'center', marginBottom: 0 }}>{line}</p>;
+										return <p key={idx} style={{ fontSize: columns === 1 ? '1rem' : '1.25rem', color: '#333', textAlign: 'center', marginBottom: 0 }}>{line}</p>;
 									})}
 								</Modal.Body>
 							</>
 						)}
 					</Modal>
 
-					<Row className="justify-content-center mt-5">
+					<Row className="justify-content-center mt-0">
 						<Col xs="auto">
 							<a href="https://github.com/bineta-d" style={{ textDecoration: "none" }} target="_blank">
 								<button type="button" className="btn btn-lg btn-portfolio text-center" data-bs-toggle="button" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
@@ -255,7 +285,7 @@ export const Projects = () => {
 					</Row>
 				</Container>
 			</div>
-		</div>
+		</section>
 	);
 };
 

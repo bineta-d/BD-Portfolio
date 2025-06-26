@@ -23,6 +23,24 @@
   justify-content: center;
 }
 
+.experience-list.experience-list-multi {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .experience-list.experience-list-multi {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+
 .experience-card {
   background: #fff;
   border-radius: 2.5rem;
@@ -42,6 +60,8 @@
 .experience-card.active {
   opacity: 1;
   pointer-events: auto;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .exp-header {
