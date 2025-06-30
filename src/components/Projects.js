@@ -118,7 +118,7 @@ export const Projects = () => {
 						justifyContent: 'center',
 						alignItems: 'stretch',
 						maxWidth: '1400px',
-						margin: '0 auto 0 auto',
+						margin: '0',
 						width: '90%',
 						transform: 'scale(0.92)',
 						transition: 'transform 0.3s',

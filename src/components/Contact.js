@@ -11,7 +11,7 @@ const socials = [
 	},
 	{
 		name: "Email",
-		url: "mailto:binetadiatta@gmail.com",
+		url: "mailto:bineta.diatta21@gmail.com",
 		icon: process.env.PUBLIC_URL + "/mail-icon.png",
 		alt: "Email",
 	},
