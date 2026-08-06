@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-scroll";
 import { Helmet } from "react-helmet-async";
 import "./App.css";
-import { IoDownloadOutline } from "react-icons/io5";
 import Hero from "./components/Hero";
 import About from "./components/About"
 import Projects from "./components/Projects"

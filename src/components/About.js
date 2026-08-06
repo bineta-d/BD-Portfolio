@@ -1,7 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav, NavLink } from "react-bootstrap";
-import { Container, Modal, Button, Card, Row, Col } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
 import "../App.css";
 import { IoDownloadOutline, IoLogoLinkedin, IoLogoGithub, IoMail } from "react-icons/io5";
