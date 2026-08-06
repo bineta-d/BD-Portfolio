@@ -46,34 +46,24 @@ const projectData = [
 		link: "https://github.com/bineta-d/Geek-Test",
 	},
 	{
-		id: 2,
-		title: "Harmony Haven",
+		id: 8,
+		title: "Wayfound",
 		description: [
-			"Student-athlete resource website"
+			"AI-powered travel planner with itinerary management"
 		],
-		details: `Built a dynamic web application using HTML & CSS with resources to guide student-athletes in topics like financial literacy, mental health & professional development. Incorporated interactive elements and animations using JavaScript to enhance user engagement and navigation experience.\n\nTech Stack: HTML, CSS, JavaScript, Bootstrap, Animation Libraries` ,
-		image: "sport.jpeg",
-		link: "https://github.com/bineta-d/The-Harmony-Haven",
+		details: `Wayfound is an AI-powered travel planner that centralizes bookings, maps, and itineraries into one system. It creates optimized, personalized trip plans based on time, budget, and preferences, adapts to real-time changes, and supports group travel with cost-splitting and collaboration tools.\n\nDemo: https://youtu.be/4BSKBTIMWoQ?si=AV4v9tcWLOF1t_A3\n\nTech Stack: React Native, TypeScript, NativeWind, Expo Go, Supabase, Figma`,
+		image: "splash-2.png",
+		link: "https://youtu.be/4BSKBTIMWoQ?si=AV4v9tcWLOF1t_A3",
 	},
 	{
-		id: 3,
-		title: "Financial Lit App",
+		id: 9,
+		title: "The Commit",
 		description: [
-			"Mobile-friendly financial literacy platform"
+			"Anonymous platform for student-athlete college sports experiences"
 		],
-		details: `Beginner-friendly financial information that's accessible to all ages, covering topics like credit, taxes, etc. The goal is to offer clear and comprehensive resources to help users build financial literacy and make informed decisions. Built using React, HTML, CSS, JavaScript, and Bootstrap for a responsive and user-friendly interface.\n\nTech Stack: React, JavaScript, HTML, CSS, Bootstrap` ,
-		image: "fin-lit.jpeg",
-		link: "https://github.com/bineta-d/Financial-Literacy-App",
-	},
-	{
-		id: 5,
-		title: "Library Management App",
-		description: [
-			"React-based library management system"
-		],
-		details: `A React app for managing a book library, featuring detailed book info, responsive design, and modern UI elements. Integrates with a RESTful API via Axios and uses React Context for state management. Includes custom SVG icons and CSS Grid/Flexbox for layout.\n\nTech Stack: React, JavaScript, CSS, HTML, DraftbitBooks API` ,
-		image: "library-pic.jpeg",
-		link: "https://github.com/bineta-d/library-management-app",
+		details: `The Commit is a cross-platform mobile application that gives student-athletes at college & universities across the nation a safe, anonymous way to share real experiences from inside college sports. Built for accountability and fairness, the platform prioritizes verification, moderation, and thoughtful review—so future athletes can make informed decisions.\n\nTech Stack: React Native, Expo Go, Supabase, Figma`,
+		image: "placeholder-thecommit.png",
+		link: "#",
 	},
 ];
 
@@ -103,11 +93,11 @@ export const Projects = () => {
 	};
 
 	return (
-		<section id="projects-section" style={{ background: '#F5FBFF', width: '100%', padding: '0 0 1rem 0' }}>
+		<section id="projects-section" style={{ background: '#FFE4E1', width: '100%', padding: '2rem 0 0 0', margin: 0 }}>
 			<div className="projects-content pt-3 text-center" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-				<Container fluid style={{ backgroundColor: "#F5FBFF", display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1700px', margin: '0 auto', padding: '0.5rem 1rem 2.5rem 1rem' }}>
+				<Container fluid style={{ backgroundColor: "#FFE4E1", display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1700px', margin: '0 auto', padding: '0.5rem 1rem 1.5rem 1rem' }}>
 					<div className="title" style={{ width: '100%', textAlign: 'center', marginTop: '0.1rem' }}>
-						<h2 className="projects-title fw-bold mb-2" style={{ fontSize: "clamp(2.2rem, 6vw, 4rem)", marginBottom: '0.5rem', textAlign: 'center' }}>Projects</h2>
+						<h2 className="projects-title fw-bold mb-2" style={{ fontSize: "clamp(2rem, 5vw, 2.8rem)", marginBottom: '1.2rem', textAlign: 'center', fontWeight: 600 }}>Projects</h2>
 					</div>
 
 					<Row className="project-row mx-0" style={{
@@ -118,50 +108,55 @@ export const Projects = () => {
 						alignItems: 'stretch',
 						maxWidth: '1400px',
 						margin: '0',
-						width: '90%',
-						transform: 'scale(0.92)',
+						width: '100%',
 						transition: 'transform 0.3s',
 					}}>
 						{projectData.map((project) => (
 							<div key={project.id} style={{
 								background: '#fff',
-								borderRadius: '2.5rem',
+								borderRadius: '1.8rem',
 								boxShadow: '0 4px 32px rgba(0,0,0,0.10)',
-								padding: '2.5rem 2rem 2rem 2rem',
+								padding: '1.8rem 1.5rem 1.5rem 1.5rem',
 								display: 'flex',
 								flexDirection: 'column',
 								alignItems: 'center',
 								justifyContent: 'space-between',
-								minHeight: '520px',
-								maxWidth: '480px',
+								minHeight: 'auto',
+								maxWidth: '400px',
 								width: '100%',
 								margin: '0 auto',
 								boxSizing: 'border-box',
-								transition: 'transform 0.2s',
+								transition: 'transform 0.2s, box-shadow 0.2s',
+							}}
+							onMouseEnter={e => {
+								e.currentTarget.style.transform = 'translateY(-4px)';
+								e.currentTarget.style.boxShadow = '0 8px 48px rgba(0,0,0,0.15)';
+							}}
+							onMouseLeave={e => {
+								e.currentTarget.style.transform = 'translateY(0)';
+								e.currentTarget.style.boxShadow = '0 4px 32px rgba(0,0,0,0.10)';
 							}}>
 								<img
 									src={project.image}
 									alt={project.title}
 									style={{
 										width: '100%',
-										maxWidth: '340px',
-										height: '220px',
+										height: '180px',
 										objectFit: 'cover',
-										borderRadius: '1.5rem',
-										marginBottom: '1.2rem',
+										borderRadius: '1.2rem',
+										marginBottom: '1rem',
 										background: '#f5f5f5',
 									}}
 								/>
-								<h2 style={{ fontSize: '2.1rem', fontWeight: 700, marginBottom: '0.3rem', textAlign: 'center', width: '100%' }}>{project.title}</h2>
+								<h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.2rem', textAlign: 'center', width: '100%' }}>{project.title}</h2>
 								{project.description && project.description[0] && (
 									<div style={{
-										fontSize: '1.13rem',
+										fontSize: '0.95rem',
 										color: '#444',
 										fontWeight: 500,
 										textAlign: 'center',
-										marginBottom: '0.25rem',
-										marginTop: '-0.2rem',
-										minHeight: '1.5em',
+										marginBottom: '0.8rem',
+										marginTop: '0.3rem',
 										lineHeight: 1.3,
 										width: '100%'
 									}}>
@@ -175,7 +170,8 @@ export const Projects = () => {
 										justifyContent: 'center',
 										alignItems: 'center',
 										width: '100%',
-										marginTop: '0.5rem',
+										marginTop: 'auto',
+										paddingTop: '0.8rem',
 										flexDirection: columns === 1 ? 'column' : 'row',
 									}}
 								>
@@ -185,11 +181,12 @@ export const Projects = () => {
 										rel="noopener noreferrer"
 										className="btn btn-portfolio"
 										style={{
-											fontSize: '1.2rem',
-											padding: '0.7rem 2.2rem',
-											borderRadius: '1.2rem',
+											fontSize: '0.95rem',
+											padding: '0.55rem 1.8rem',
+											borderRadius: '1rem',
 											fontWeight: 600,
-											height: '52px',
+											height: 'auto',
+											minHeight: '2.4rem',
 											display: 'flex',
 											alignItems: 'center',
 											justifyContent: 'center',
@@ -199,7 +196,8 @@ export const Projects = () => {
 											transition: 'background 0.2s',
 											textDecoration: 'none',
 											margin: 0,
-										}}
+										flex: columns === 1 ? '1 1 100%' : '1 1 auto',
+									}}
 										onMouseOver={e => e.currentTarget.style.background = '#333'}
 										onMouseOut={e => e.currentTarget.style.background = '#111'}
 									>
@@ -207,11 +205,12 @@ export const Projects = () => {
 									</a>
 									<Button
 										style={{
-											fontSize: '1.2rem',
-											padding: '0.7rem 2.2rem',
-											borderRadius: '1.2rem',
+											fontSize: '0.95rem',
+											padding: '0.55rem 1.8rem',
+											borderRadius: '1rem',
 											fontWeight: 600,
-											height: '52px',
+											height: 'auto',
+											minHeight: '2.4rem',
 											display: 'flex',
 											alignItems: 'center',
 											justifyContent: 'center',
@@ -221,8 +220,7 @@ export const Projects = () => {
 											transition: 'background 0.2s',
 											textDecoration: 'none',
 											margin: 0,
-											width: columns === 1 ? '65vw' : undefined,
-											maxWidth: columns === 1 ? '65vw' : undefined,
+											flex: columns === 1 ? '1 1 100%' : '1 1 auto',
 										}}
 										onClick={() => handleShowModal(project)}
 										onMouseOver={e => e.currentTarget.style.background = '#333'}

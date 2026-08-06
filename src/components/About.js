@@ -8,10 +8,10 @@ import { IoDownloadOutline, IoLogoLinkedin, IoLogoGithub, IoMail } from "react-i
 
 export const About = () => {
   return (
-    <div className="holder mb-5">
-      <div id="about-title" className="about-content pt-1 text-center" style={{ backgroundColor: "#F5FBFF" }}>
-        <Container fluid style={{ backgroundColor: "#F5FBFF" }}>
-          <h2 className="fw-bold text-center" style={{ fontSize: "3rem", marginBottom: "1.2rem" }}>About</h2>
+    <div className="holder mb-0">
+      <div id="about-title" className="about-content pt-1 text-center" style={{ backgroundColor: "#FFE4E1" }}>
+        <Container fluid style={{ backgroundColor: "#FFE4E1", padding: '2.5rem 1rem' }}>
+          <h2 className="fw-bold text-center" style={{ fontSize: "2.8rem", marginBottom: "1rem", fontWeight: 600 }}>About</h2>
           <div className="about-content-row">
             <div className="about-icons-col">
               <div className="about-icons d-flex justify-content-center align-items-center">
@@ -27,22 +27,25 @@ export const About = () => {
               </div>
             </div>
             <div className="about-text-col px-2 mx-auto" style={{marginTop:0, textAlign: 'center', maxWidth: '75vw'}}>
-                 <p className="text-start about-paragraph" style={{marginBottom: "0.3rem", maxWidth: '75%', marginLeft: 'auto', marginRight: 'auto', }}>
+                 <p className="text-start about-paragraph" style={{marginBottom: "1.5rem", maxWidth: '75%', marginLeft: 'auto', marginRight: 'auto', }}>
                 I'm Bineta Diatta, a software engineer experienced in mobile, web and full stack development. With a strong foundation in computer science principles and a passion for creating innovative solutions to complex problems within my communities and beyond. 
                 My goal is to leverage my skills and knowledge to contribute to impactful projects and make a positive difference in the technology industry and the world.
                 <br/> As a former Division I athlete, I am well versed in team collaboration, leadership, and time management and bring a unique perspective to software engineering, combining my technical skills with the ability to work effectively in high-pressure environments.
-               
-               {/* to be a subheaded bold and larger  */}
-                 <div>Education:</div> 
-                 <p>Florida International University (FIU) - Bachelors of Science (B.S.) degree in Computer Science
-                 Focus: Software Design & Development</p>
               </p>
+              <div style={{maxWidth: '75%', marginLeft: 'auto', marginRight: 'auto', textAlign: 'start'}}>
+                 <h3 style={{fontSize: '1.6rem', fontWeight: '700', marginBottom: '0.8rem', color: '#232323'}}>Education</h3>
+                 <p className="text-start about-paragraph" style={{marginBottom: "0rem", maxWidth: '100%'}}>
+                   <strong>Florida International University (FIU)</strong><br/>
+                   Bachelors of Science (B.S.) in Computer Science<br/>
+                   <em>Focus: Software Design & Development</em>
+                 </p>
+              </div>
             </div>
           </div>
         </Container>
-        <Container className="pb-5">
+        <Container className="pb-0" style={{padding: '0.5rem 1rem 1.5rem 1rem'}}>
           <div><h4 className="title">Learn More</h4></div>
-          <div className="learn-more-btns-grid">
+          <div className="learn-more-btns-grid" style={{gap: '1rem', marginBottom: '0rem'}}>
             <Nav.Link as={Link} to="skills-title" smooth={true} duration={600} offset={-70}>
               <button type ="button" className="learn-more-btn" data-bs-toggle="button">Skills</button>
             </Nav.Link>

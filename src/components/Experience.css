@@ -1,7 +1,9 @@
 .experience-section {
-  background: #F5FBFF;
+  background: #FFE4E1;
   min-height: 500px;
   position: relative;
+  padding: 2rem 0 !important;
+  margin: 0;
 }
 
 .experience-slider {
