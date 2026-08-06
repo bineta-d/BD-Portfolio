@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowUp } from 'react-icons/fa'; 
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -9,52 +9,31 @@ export const Footer = () => {
 
   return (
     <>
-      <footer style={{
-        backgroundColor: '#282c34',
-        color: 'white',
-        padding: '2rem',
-        position: 'relative',
-        marginBottom: '60px', 
-        textAlign: 'center', 
-      }}>
+      <footer className="bg-gray-800 text-white py-8 relative text-center">
         <Container fluid>
           <Row className="d-flex justify-content-center align-items-center text-center">
-            <Col className="d-flex justify-content-center align-items-center" style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-              <div style={{
-                width: '50px',
-                height: '50px',
-                borderRadius: '50%',
-                overflow: 'hidden',
-                marginRight: '10px',
-              }}>
-              </div>
-              <p style={{ fontSize: '1.2rem', color: 'white', textAlign: 'center', margin: 0 }}>Bineta Diatta &copy; {new Date().getFullYear()}</p>
+            <Col className="d-flex justify-content-center align-items-center flex-col">
+              <p className="text-xl font-medium m-0">Bineta Diatta &copy; {new Date().getFullYear()}</p>
             </Col>
           </Row>
         </Container>
       </footer>
 
       {/* Back to Top Button */}
-      <Button
+      <button
         onClick={scrollToTop}
+        className="fixed bg-black border-none p-4 rounded-full cursor-pointer shadow-lg flex items-center justify-center hover:bg-gray-900 transition-colors"
         style={{
-          position: 'fixed',
           bottom: '20px',
           right: '20px',
-          backgroundColor: 'black',
-          border: 'none',
-          color: 'white',
-          padding: '1rem',
-          borderRadius: '50%',
-          cursor: 'pointer',
-          fontSize: '1.5rem',
-          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+          width: '56px',
+          height: '56px',
           zIndex: 100,
         }}
-        className="d-flex align-items-center justify-content-center"
+        aria-label="Back to top"
       >
-        <FaArrowUp size={30} />
-      </Button>
+        <FaArrowUp size={24} color="#FFE4E1" />
+      </button>
     </>
   );
 };

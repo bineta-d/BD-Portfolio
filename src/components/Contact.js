@@ -20,105 +20,41 @@ const socials = [
 const Contact = () => (
 	<section
 		id="contact"
-		className="my-0"
-		style={{
-			background: "#F5FBFF",
-			width: "100%",
-			padding: "0 0 0.7rem 0",
-			marginTop: 0,
-		}}
+		className="my-0 bg-pink-100 w-full pb-3 mt-0"
 	>
-		<hr
-			style={{
-				border: "none",
-				borderTop: "1.5px solid #e0e0e0",
-				margin: 0,
-				marginBottom: "0.7rem",
-				width: "100%",
-			}}
-		/>
+		<hr className="border-none border-t border-gray-300 m-0 mb-3 w-full" />
 		<Container
 			fluid
-			style={{
-				maxWidth: "100%",
-				margin: 0,
-				padding: "0.7rem 0 0 0",
-				background: "transparent",
-				borderRadius: 0,
-				boxShadow: "none",
-				display: "block",
-			}}
+			className="max-w-full m-0 py-3 bg-transparent rounded-none shadow-none block"
 		>
-			<h2
-				className="fw-bold mb-3"
-				style={{
-					fontSize: "2.5rem",
-					textAlign: "center",
-					marginBottom: "1.2rem",
-					color: "#111",
-				}}
-			>
+			<h2 className="fw-bold mb-3 text-3xl text-center mb-3 text-gray-900">
 				Contact
 			</h2>
-			<div
-				style={{
-					display: "flex",
-					flexDirection: "row",
-					justifyContent: "center",
-					alignItems: "center",
-					gap: "1.5rem",
-					width: "100%",
-				}}
-				className="contact-flex"
-			>
-				<p
-					style={{
-						fontSize: "1.2rem",
-						textAlign: "center",
-						margin: 0,
-						color: "#444",
-						fontWeight: 500,
-					}}
-				>
+			<div className="flex flex-row justify-center items-center gap-6 w-full contact-flex">
+				<p className="text-xl text-center m-0 text-gray-600 font-medium">
 					Feel free to reach out here:
 				</p>
-				<div
-					style={{
-						display: "flex",
-						gap: "1.2rem",
-						alignItems: "center",
-						marginBottom: 0,
-						marginTop: 0,
-					}}
-					className="contact-icons"
-				>
+				<div className="flex gap-3 items-center mb-0 mt-0 contact-icons">
 					{socials.map((social) => (
 						<a
 							key={social.name}
 							href={social.url}
 							target="_blank"
 							rel="noopener noreferrer"
+							className="flex items-center justify-center rounded-full bg-transparent shadow-none border-none p-0"
 							style={{
-								display: "flex",
-								alignItems: "center",
-								justifyContent: "center",
-								borderRadius: "50%",
-								background: "transparent",
-								boxShadow: "none",
 								width: 44,
 								height: 44,
-								border: "none",
-								padding: 0,
 							}}
 							aria-label={social.name}
 						>
 							<img
 								src={social.icon}
 								alt={social.alt}
+								className="object-contain"
 								style={{
 									width: 32,
 									height: 32,
-									objectFit: "contain",
 								}}
 							/>
 						</a>
