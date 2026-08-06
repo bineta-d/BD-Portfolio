@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-scroll";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import "./App.css";
 import { IoDownloadOutline } from "react-icons/io5";
 import Hero from "./components/Hero";
