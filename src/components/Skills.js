@@ -42,7 +42,7 @@ export const Skills = () => {
     <div className="holder px-2 pb-0" style={{backgroundColor: '#FFE4E1', padding: '2rem 1rem 0 1rem', margin: 0, border: 'none'}}>
       <div className="skills-content" id="skills-content" style={{padding: '1rem 0 0 0', margin: 0}}>
         <div className="title" id="skills-title">
-          <h2 className="fw-bold" style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 600 }}>Skills & Experience</h2>
+          <h2 className="fw-bold" style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 600 }}>Skills</h2>
         </div>
        
       </div>

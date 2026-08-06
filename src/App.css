@@ -463,11 +463,13 @@ section {
 }
 @media (max-width: 600px) {
   .learn-more-btns-grid {
-    flex-direction: column !important;
+    flex-direction: row !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
     max-width: 99vw;
     align-items: stretch !important;
-    width: 100%; /* was 100vw, now responsive */
+    width: 100%;
     overflow-x: hidden;
   }
 }
