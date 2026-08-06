@@ -16,14 +16,14 @@ const projectData = [
 		link: "https://github.com/skyler-hall/Recyclepediamdc",
 	},
 	{
-		id: 6,
-		title: "CinePals iOS App",
+		id: 8,
+		title: "Wayfound",
 		description: [
-			"SwiftUI movie search & social app"
+			"AI-powered travel planner with itinerary management"
 		],
-		details: `CinePals — iOS Application  (February 2025 - April 2025)\n• Created API endpoints to serve responsive movie search interface with debounced input handling for less API calls.\n• Implemented dynamic UI screens in Swift (cast, runtime, trailers) using data from The Movie Database (TMDb) API.\n• Integrated Firebase to fetch and dynamically render user profiles on client upon search and for a personalized UX, built with a team of student developers.\n\nTech Stack: Swift, SwiftUI, Firebase, Xcode, MVC principles, TMDb API` ,
-		image: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
-		link: "https://youtube.com/shorts/bJ6iVZQMlqU?si=AF3ASCg5gWDmHfPV",
+		details: `Wayfound is an AI-powered travel planner that centralizes bookings, maps, and itineraries into one system. It creates optimized, personalized trip plans based on time, budget, and preferences, adapts to real-time changes, and supports group travel with cost-splitting and collaboration tools.\n\nDemo: https://youtu.be/4BSKBTIMWoQ?si=AV4v9tcWLOF1t_A3\n\nTech Stack: React Native, TypeScript, NativeWind, Expo Go, Supabase, Figma`,
+		image: "splash-2.png",
+		link: "https://youtu.be/4BSKBTIMWoQ?si=AV4v9tcWLOF1t_A3",
 	},
 	{
 		id: 7,
@@ -36,24 +36,14 @@ const projectData = [
 		link: "https://github.com/bineta-d/TERRA-Mobile",
 	},
 	{
-		id: 4,
-		title: "Geek Test",
+		id: 6,
+		title: "CinePals iOS App",
 		description: [
-			"Book recommendation REST API"
+			"SwiftUI movie search & social app"
 		],
-		details: `Users can discover new books and authors while sorting results based on various criteria. Features include retrieving books by genre, top sellers, and ratings, as well as updating book prices by publisher. Built using REST API principles, handling GET and PUT/PATCH requests to manage book data effectively.\n\nTech Stack: Java, Spring Boot, SQL, Postman` ,
-		image: "geek.avif",
-		link: "https://github.com/bineta-d/Geek-Test",
-	},
-	{
-		id: 8,
-		title: "Wayfound",
-		description: [
-			"AI-powered travel planner with itinerary management"
-		],
-		details: `Wayfound is an AI-powered travel planner that centralizes bookings, maps, and itineraries into one system. It creates optimized, personalized trip plans based on time, budget, and preferences, adapts to real-time changes, and supports group travel with cost-splitting and collaboration tools.\n\nDemo: https://youtu.be/4BSKBTIMWoQ?si=AV4v9tcWLOF1t_A3\n\nTech Stack: React Native, TypeScript, NativeWind, Expo Go, Supabase, Figma`,
-		image: "splash-2.png",
-		link: "https://youtu.be/4BSKBTIMWoQ?si=AV4v9tcWLOF1t_A3",
+		details: `CinePals — iOS Application  (February 2025 - April 2025)\n• Created API endpoints to serve responsive movie search interface with debounced input handling for less API calls.\n• Implemented dynamic UI screens in Swift (cast, runtime, trailers) using data from The Movie Database (TMDb) API.\n• Integrated Firebase to fetch and dynamically render user profiles on client upon search and for a personalized UX, built with a team of student developers.\n\nTech Stack: Swift, SwiftUI, Firebase, Xcode, MVC principles, TMDb API` ,
+		image: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+		link: "https://youtube.com/shorts/bJ6iVZQMlqU?si=AF3ASCg5gWDmHfPV",
 	},
 	{
 		id: 9,
@@ -64,6 +54,16 @@ const projectData = [
 		details: `The Commit is a cross-platform mobile application that gives student-athletes at college & universities across the nation a safe, anonymous way to share real experiences from inside college sports. Built for accountability and fairness, the platform prioritizes verification, moderation, and thoughtful review—so future athletes can make informed decisions.\n\nTech Stack: React Native, Expo Go, Supabase, Figma`,
 		image: "placeholder-thecommit.png",
 		link: "#",
+	},
+	{
+		id: 4,
+		title: "Geek Test",
+		description: [
+			"Book recommendation REST API"
+		],
+		details: `Users can discover new books and authors while sorting results based on various criteria. Features include retrieving books by genre, top sellers, and ratings, as well as updating book prices by publisher. Built using REST API principles, handling GET and PUT/PATCH requests to manage book data effectively.\n\nTech Stack: Java, Spring Boot, SQL, Postman` ,
+		image: "geek.avif",
+		link: "https://github.com/bineta-d/Geek-Test",
 	},
 ];
 

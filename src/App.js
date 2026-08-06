@@ -56,6 +56,8 @@ const App = () => {
  
       </div>
 
+      <div className="section-divider"></div>
+
       <div fluid className="section text-center" id="skills">
       <Skills/>
       </div>
@@ -66,14 +68,20 @@ const App = () => {
         <Experience/>
       </div>
 
+      <div className="section-divider"></div>
+
       <div fluid className="section text-center" id="projects">
       <Projects/>      
     
       </div>
 
+      <div className="section-divider"></div>
+
       <div fluid className="section text-center" id="contact">
       <Contact/>
       </div>
+
+      <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="more">
       <Affiliations/>

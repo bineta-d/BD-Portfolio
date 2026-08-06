@@ -9,7 +9,7 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gray-800 text-white py-8 relative text-center" style={{ marginBottom: '60px' }}>
+      <footer className="bg-gray-800 text-white py-8 relative text-center">
         <Container fluid>
           <Row className="d-flex justify-content-center align-items-center text-center">
             <Col className="d-flex justify-content-center align-items-center flex-col">
