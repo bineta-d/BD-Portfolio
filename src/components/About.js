@@ -27,10 +27,15 @@ export const About = () => {
               </div>
             </div>
             <div className="about-text-col px-2 mx-auto" style={{marginTop:0, textAlign: 'center', maxWidth: '75vw'}}>
-                 <p className="text-center about-paragraph" style={{marginBottom: "0.3rem", maxWidth: '75%', marginLeft: 'auto', marginRight: 'auto', }}>
-                I'm currently an undergraduate student-athlete working towards my Bachelors of Science (B.S.) degree in Computer Science with an expected graduation date of December 2025.
-                <br /> My interests include the development of full stack web applications, mobile application development, front/backend development, and database management.
-                <br/> I've played Division I basketball for four years, most recently a member of the Women's Basketball Team at Florida International University.
+                 <p className="text-start about-paragraph" style={{marginBottom: "0.3rem", maxWidth: '75%', marginLeft: 'auto', marginRight: 'auto', }}>
+                I'm Bineta Diatta, a software engineer experienced in mobile, web and full stack development. With a strong foundation in computer science principles and a passion for creating innovative solutions to complex problems within my communities and beyond. 
+                My goal is to leverage my skills and knowledge to contribute to impactful projects and make a positive difference in the technology industry and the world.
+                <br/> As a former Division I athlete, I am well versed in team collaboration, leadership, and time management and bring a unique perspective to software engineering, combining my technical skills with the ability to work effectively in high-pressure environments.
+               
+               {/* to be a subheaded bold and larger  */}
+                 <div>Education:</div> 
+                 <p>Florida International University (FIU) - Bachelors of Science (B.S.) degree in Computer Science
+                 Focus: Software Design & Development</p>
               </p>
             </div>
           </div>

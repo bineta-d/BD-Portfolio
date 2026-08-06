@@ -16,8 +16,8 @@ export const Hero = () =>{
               <img src="/headshot.jpg" className="rounded-8 align-content-center profile-img-responsive" alt="Profile" />
             </div>
             <h1 className="fw-bold">Bineta Diatta</h1>
-            <h1 className="hero-title-secondary">Computer Science Student<br/> @ FIU</h1>
-            <h1 className="hero-title-tertiary">Software Design & Development Track</h1>
+            <h1 className="hero-title-secondary">Software Engineer<br/></h1>
+            <h1 className="hero-title-tertiary">Mobile • Web • Full Stack</h1>
             <Nav.Link as={Link} to="about-title" smooth={true} duration={1000} offset={-145}>
               <button type ="button" className="btn btn-lg btn-portfolio" data-bs-toggle="button">View Portfolio</button>
             </Nav.Link>

@@ -44,9 +44,7 @@ export const Skills = () => {
         <div className="title" id="skills-title">
           <h2 className="fw-bold" style={{ fontSize: '3rem' }}>Skills</h2>
         </div>
-        <p style={{ fontWeight: '600', fontSize: '1.2rem' }}>
-          I'm dedicated to continuous learning & listed below are some of my skills:
-        </p>
+       
       </div>
       {/* Cycling Carousel */}
       <div className="skills-carousel-wrapper">
