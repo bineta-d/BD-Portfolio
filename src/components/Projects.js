@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, Row, Col, Modal, Button } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const projectData = [

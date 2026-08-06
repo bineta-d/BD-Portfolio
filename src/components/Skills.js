@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
 import {
   IoLogoJavascript,
   IoLogoHtml5,
@@ -10,12 +9,10 @@ import {
 } from "react-icons/io5";
 import {
   SiMysql,
-  SiSpring,
   SiTailwindcss,
   SiTypescript,
   SiSwift,
   SiNodedotjs,
-  SiMongodb,
   SiFigma,
   SiDart
 } from "react-icons/si";
