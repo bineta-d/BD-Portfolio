@@ -9,26 +9,11 @@ export const Footer = () => {
 
   return (
     <>
-      <footer style={{
-        backgroundColor: '#282c34',
-        color: 'white',
-        padding: '2rem',
-        position: 'relative',
-        marginBottom: '60px', 
-        textAlign: 'center', 
-      }}>
+      <footer className="bg-gray-900 text-white py-8 relative mb-60 text-center">
         <Container fluid>
           <Row className="d-flex justify-content-center align-items-center text-center">
-            <Col className="d-flex justify-content-center align-items-center" style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-              <div style={{
-                width: '50px',
-                height: '50px',
-                borderRadius: '50%',
-                overflow: 'hidden',
-                marginRight: '10px',
-              }}>
-              </div>
-              <p style={{ fontSize: '1.2rem', color: 'white', textAlign: 'center', margin: 0 }}>Bineta Diatta &copy; {new Date().getFullYear()}</p>
+            <Col className="flex flex-col justify-center items-center">
+              <p className="text-xl font-medium m-0">Bineta Diatta &copy; {new Date().getFullYear()}</p>
             </Col>
           </Row>
         </Container>
@@ -37,23 +22,10 @@ export const Footer = () => {
       {/* Back to Top Button */}
       <Button
         onClick={scrollToTop}
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          backgroundColor: 'black',
-          border: 'none',
-          color: 'white',
-          padding: '1rem',
-          borderRadius: '50%',
-          cursor: 'pointer',
-          fontSize: '1.5rem',
-          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
-          zIndex: 100,
-        }}
-        className="d-flex align-items-center justify-content-center"
+        className="fixed bottom-5 right-5 bg-black border-none p-4 rounded-full cursor-pointer text-2xl shadow-lg d-flex align-items-center justify-content-center"
+        style={{ zIndex: 100 }}
       >
-        <FaArrowUp size={30} />
+        <FaArrowUp size={30} color="#FFE4E1" />
       </Button>
     </>
   );

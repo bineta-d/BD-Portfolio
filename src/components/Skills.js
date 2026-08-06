@@ -36,16 +36,16 @@ export const Skills = () => {
     { icon: <SiNodedotjs size={80} color="#339933" />, name: "Node.js" },
     { icon: <SiMysql size={80} color="#00758f" />, name: "MySQL" },
     { icon: <SiTailwindcss size={80} color="#38bdf8" />, name: "Tailwind CSS" },
-    { icon: <div style={{width: '80px', height: '80px', backgroundColor: '#5DADE2', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '12px', fontWeight: 'bold'}}>Flutter</div>, name: "Flutter" },
+    { icon: <div className="flex items-center justify-center w-20 h-20 rounded bg-blue-400 text-white text-xs font-bold">Flutter</div>, name: "Flutter" },
     { icon: <SiFigma size={80} color="#F24E1E" />, name: "Figma" },
     { icon: <SiDart size={80} color="#0175C2" />, name: "Dart" },
   ];
 
   return (
-    <div className="holder px-2 pb-0" style={{backgroundColor: '#FFE4E1', padding: '2rem 1rem 0 1rem', margin: 0, border: 'none'}}>
-      <div className="skills-content" id="skills-content" style={{padding: '1rem 0 0 0', margin: 0}}>
+    <div className="holder px-2 pb-0 bg-pink-100 py-8 px-4 m-0 border-none">
+      <div className="skills-content" id="skills-content" className="py-4 m-0">
         <div className="title" id="skills-title">
-          <h2 className="fw-bold" style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 600 }}>Skills & Experience</h2>
+          <h2 className="fw-bold text-4xl mb-6 font-semibold">Skills & Experience</h2>
         </div>
        
       </div>

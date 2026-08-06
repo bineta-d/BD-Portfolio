@@ -14,8 +14,8 @@ const affiliations = [
 
 const Affiliations = () => {
   return (
-    <div id="affils-content" className="affiliations-section">
-      <h2 className="fw-bold text-center" style={{ fontSize: "2.2rem", marginBottom: "1.2rem" }}>Affiliations</h2>
+    <div id="affiliations" className="affiliations-section">
+      <h2 className="fw-bold text-center text-3xl mb-5">Affiliations</h2>
       <div className="affiliations-carousel-wrapper">
         <div className="affiliations-carousel">
           {[...affiliations, ...affiliations].map((affil, idx) => (

@@ -31,12 +31,13 @@ const App = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav"  >
             <Nav className="ms-auto" >
-              <Nav.Link as={Link} to="about" smooth={true} duration={1000} className="text-dark">About</Nav.Link>
-              <Nav.Link as={Link} to="skills" smooth={true} duration={1000} className="text-dark">Skills</Nav.Link>
-              <Nav.Link as={Link} to="projects" smooth={true} duration={1000} className="text-dark">Projects</Nav.Link>
-              <Nav.Link as={Link} to="contact" smooth={true} duration={1000} className="text-dark">Contact</Nav.Link>
-              <Nav.Link as={Link} to="more" smooth={true} duration={1000} className="text-dark">More</Nav.Link>
-              <Nav.Link href="/BD-Resume-25-copy.pdf" target="_blank" download className="text-dark" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+              <Nav.Link as={Link} to="about" smooth={true} duration={1000} offset={-100} className="text-dark">About</Nav.Link>
+              <Nav.Link as={Link} to="skills" smooth={true} duration={1000} offset={-100} className="text-dark">Skills</Nav.Link>
+              <Nav.Link as={Link} to="experience" smooth={true} duration={1000} offset={-100} className="text-dark">Experience</Nav.Link>
+              <Nav.Link as={Link} to="projects" smooth={true} duration={1000} offset={-100} className="text-dark">Projects</Nav.Link>
+              <Nav.Link as={Link} to="contact" smooth={true} duration={1000} offset={-100} className="text-dark">Contact</Nav.Link>
+              <Nav.Link as={Link} to="more" smooth={true} duration={1000} offset={-100} className="text-dark">More</Nav.Link>
+              <Nav.Link href="/BD-Resume-25-copy.pdf" target="_blank" download className="text-dark flex items-center gap-2">
                 Resume <IoDownloadOutline size={24} style={{marginLeft: '2px'}} />
               </Nav.Link>
             </Nav>
@@ -52,29 +53,34 @@ const App = () => {
     
       <div fluid className="section  text-center" id="about">
       <About/>
- 
       </div>
+
+      <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="skills">
       <Skills/>
       </div>
 
-      <div fluid className="section text-center" id="pre-projects-section" style={{minHeight: '120px', padding: '2rem 0'}}>
-        {/* Add your content here soon */}
-      </div>
+      <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="experience">
         <Experience/>
       </div>
+
+      <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="projects">
       <Projects/>      
     
       </div>
 
+      <div className="section-divider"></div>
+
       <div fluid className="section text-center" id="contact">
       <Contact/>
       </div>
+
+      <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="more">
       <Affiliations/>
