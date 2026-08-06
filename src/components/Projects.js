@@ -93,11 +93,11 @@ export const Projects = () => {
 	};
 
 	return (
-		<section id="projects-section" className="bg-pink-100 w-full py-8 px-0 m-0 border-none">
-			<div className="projects-content pt-3 text-center flex flex-col items-center w-full m-0">
-				<Container fluid className="bg-pink-100 flex flex-col items-center max-w-7xl m-auto px-4">
-					<div className="title w-full text-center mt-0">
-						<h2 className="projects-title fw-bold mb-2 text-4xl font-semibold text-center">Projects</h2>
+		<section id="projects-section" style={{ background: '#FFE4E1', width: '100%', padding: '2rem 0 0 0', margin: 0, border: 'none' }}>
+			<div className="projects-content pt-3 text-center" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: 0 }}>
+				<Container fluid style={{ backgroundColor: "#FFE4E1", display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1700px', margin: '0 auto', padding: '0.5rem 1rem 0 1rem' }}>
+					<div className="title" style={{ width: '100%', textAlign: 'center', marginTop: '0.1rem' }}>
+						<h2 className="projects-title fw-bold mb-2" style={{ fontSize: "clamp(2rem, 5vw, 2.8rem)", marginBottom: '1.2rem', textAlign: 'center', fontWeight: 600 }}>Projects</h2>
 					</div>
 
 					<Row className="project-row mx-0" style={{
@@ -112,7 +112,22 @@ export const Projects = () => {
 						transition: 'transform 0.3s',
 					}}>
 						{projectData.map((project) => (
-							<div key={project.id} className="bg-white rounded-3xl shadow-lg p-7 flex flex-col items-center justify-between min-h-auto max-w-md w-full mx-auto box-border transition-all"
+							<div key={project.id} style={{
+								background: '#fff',
+								borderRadius: '1.8rem',
+								boxShadow: '0 4px 32px rgba(0,0,0,0.10)',
+								padding: '1.8rem 1.5rem 1.5rem 1.5rem',
+								display: 'flex',
+								flexDirection: 'column',
+								alignItems: 'center',
+								justifyContent: 'space-between',
+								minHeight: 'auto',
+								maxWidth: '400px',
+								width: '100%',
+								margin: '0 auto',
+								boxSizing: 'border-box',
+								transition: 'transform 0.2s, box-shadow 0.2s',
+							}}
 							onMouseEnter={e => {
 								e.currentTarget.style.transform = 'translateY(-4px)';
 								e.currentTarget.style.boxShadow = '0 8px 48px rgba(0,0,0,0.15)';
@@ -124,29 +139,92 @@ export const Projects = () => {
 								<img
 									src={project.image}
 									alt={project.title}
-									className="w-full h-44 object-cover rounded-xl mb-4 bg-gray-100"
+									style={{
+										width: '100%',
+										height: '180px',
+										objectFit: 'cover',
+										borderRadius: '1.2rem',
+										marginBottom: '1rem',
+										background: '#f5f5f5',
+									}}
 								/>
 								<h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.2rem', textAlign: 'center', width: '100%' }}>{project.title}</h2>
-								<h2 className="text-2xl font-bold mb-1 text-center w-full">{project.title}</h2>
 								{project.description && project.description[0] && (
-									<div className="text-sm text-gray-600 font-medium text-center mb-3 mt-1 leading-tight w-full">
+									<div style={{
+										fontSize: '0.95rem',
+										color: '#444',
+										fontWeight: 500,
+										textAlign: 'center',
+										marginBottom: '0.8rem',
+										marginTop: '0.3rem',
+										lineHeight: 1.3,
+										width: '100%'
+									}}>
 										{project.description[0]}
 									</div>
 								)}
 								<div
-									className="flex gap-2 justify-center items-center w-full mt-auto pt-2 flex-wrap"
+									style={{
+										display: 'flex',
+										gap: '0.5rem',
+										justifyContent: 'center',
+										alignItems: 'center',
+										width: '100%',
+										marginTop: 'auto',
+										paddingTop: '0.8rem',
+										flexDirection: columns === 1 ? 'column' : 'row',
+									}}
 								>
 									<a
 										href={project.link}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="btn btn-portfolio text-sm px-7 py-2 rounded-2xl font-semibold h-auto min-h-10 flex items-center justify-center bg-gray-900 text-white border-none m-0 hover:bg-gray-700"
+										className="btn btn-portfolio"
+										style={{
+											fontSize: '0.95rem',
+											padding: '0.55rem 1.8rem',
+											borderRadius: '1rem',
+											fontWeight: 600,
+											height: 'auto',
+											minHeight: '2.4rem',
+											display: 'flex',
+											alignItems: 'center',
+											justifyContent: 'center',
+											background: '#111',
+											color: '#fff',
+											border: 'none',
+											transition: 'background 0.2s',
+											textDecoration: 'none',
+											margin: 0,
+										flex: columns === 1 ? '1 1 100%' : '1 1 auto',
+									}}
+										onMouseOver={e => e.currentTarget.style.background = '#333'}
+										onMouseOut={e => e.currentTarget.style.background = '#111'}
 									>
 										View
 									</a>
 									<Button
-										className="text-sm px-7 py-2 rounded-2xl font-semibold h-auto min-h-10 flex items-center justify-center bg-gray-900 text-white border-none m-0 hover:bg-gray-700"
+										style={{
+											fontSize: '0.95rem',
+											padding: '0.55rem 1.8rem',
+											borderRadius: '1rem',
+											fontWeight: 600,
+											height: 'auto',
+											minHeight: '2.4rem',
+											display: 'flex',
+											alignItems: 'center',
+											justifyContent: 'center',
+											background: '#111',
+											color: '#fff',
+											border: 'none',
+											transition: 'background 0.2s',
+											textDecoration: 'none',
+											margin: 0,
+											flex: columns === 1 ? '1 1 100%' : '1 1 auto',
+										}}
 										onClick={() => handleShowModal(project)}
+										onMouseOver={e => e.currentTarget.style.background = '#333'}
+										onMouseOut={e => e.currentTarget.style.background = '#111'}
 									>
 										Details
 									</Button>
@@ -159,33 +237,52 @@ export const Projects = () => {
 						{activeProject && (
 							<>
 								<Modal.Header closeButton>
-									<Modal.Title className="text-4xl font-bold">{activeProject.title}</Modal.Title>
+									<Modal.Title style={{ fontSize: '2.2rem', fontWeight: 700 }}>{activeProject.title}</Modal.Title>
 								</Modal.Header>
-								<Modal.Body className="flex flex-col items-center justify-center p-12 w-full max-w-full box-border text-center mx-auto">
-									<img src={activeProject.image} alt={activeProject.title} className="w-full max-w-96 h-64 object-cover rounded-2xl mb-6 bg-gray-100" />
+								<Modal.Body style={{
+									display: 'flex',
+									flexDirection: 'column',
+									alignItems: 'center',
+									justifyContent: 'center',
+									padding: '3rem 2rem',
+									width: '100%',
+									maxWidth: '100%',
+									boxSizing: 'border-box',
+									textAlign: 'center',
+									margin: '0 auto',
+								}}>
+									<img src={activeProject.image} alt={activeProject.title} style={{ width: '100%', maxWidth: '380px', height: '260px', objectFit: 'cover', borderRadius: '1.5rem', marginBottom: '1.5rem', background: '#f5f5f5' }} />
 									{activeProject.details.split(/\n|\n/).map((line, idx) => {
 										if (line.trim().toLowerCase().startsWith('live site:')) {
 											const url = line.split('Live Site:')[1].trim();
 											return (
-												<div key={idx} className="mt-3 w-full text-center">
-													<strong>Live Site:</strong> <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-600 break-all">{url}</a>
+												<div key={idx} style={{ marginTop: '1.2em', width: '100%', textAlign: 'center' }}>
+													<strong>Live Site:</strong> <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#007bff', wordBreak: 'break-all', textDecoration: 'underline', cursor: 'pointer' }}>{url}</a>
+												</div>
+											);
+										}
+										if (line.trim().toLowerCase().startsWith('demo:')) {
+											const url = line.split('Demo:')[1].trim();
+											return (
+												<div key={idx} style={{ marginTop: '1.2em', width: '100%', textAlign: 'center' }}>
+													<strong>Demo:</strong> <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#007bff', wordBreak: 'break-all', textDecoration: 'underline', cursor: 'pointer' }}>{url}</a>
 												</div>
 											);
 										}
 										if (line.trim().toLowerCase().startsWith('tech stack:')) {
-											return <div key={idx} className="font-bold mt-3 w-full text-center">{line}</div>;
+											return <div key={idx} style={{ fontWeight: 'bold', marginTop: '1.2em', width: '100%', textAlign: 'center' }}>{line}</div>;
 										}
-										return <p key={idx} className={`text-base text-gray-700 text-center ${columns === 1 ? '' : 'lg:text-xl'} mb-0`}>{line}</p>;
+										return <p key={idx} style={{ fontSize: columns === 1 ? '1rem' : '1.25rem', color: '#333', textAlign: 'center', marginBottom: 0 }}>{line}</p>;
 									})}
 								</Modal.Body>
 							</>
 						)}
 					</Modal>
 
-					<Row className="justify-content-center mt-8 pt-6 pb-6 w-full relative z-10 bg-pink-100">
+					<Row className="justify-content-center" style={{marginTop: '2rem', paddingTop: '1.5rem', paddingBottom: '1.5rem', width: '100%', position: 'relative', zIndex: 10, background: '#FFE4E1'}}>
 						<Col xs="auto">
-							<a href="https://github.com/bineta-d" className="no-underline" target="_blank" rel="noopener noreferrer">
-								<button type="button" className="btn btn-lg btn-portfolio text-center flex justify-center items-center mb-0 mt-0 text-sm px-7 py-1 min-h-10">
+							<a href="https://github.com/bineta-d" style={{ textDecoration: "none" }} target="_blank" rel="noopener noreferrer">
+								<button type="button" className="btn btn-lg btn-portfolio text-center" data-bs-toggle="button" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginBottom: 0, marginTop: 0, fontSize: '0.95rem', padding: '0.6rem 1.8rem', minHeight: '2.4rem' }}>
 									View My Github
 								</button>
 							</a>
