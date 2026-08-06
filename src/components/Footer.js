@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowUp } from 'react-icons/fa'; 
-import { Container, Row, Col } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -9,7 +9,7 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gray-800 text-white py-8 relative text-center">
+      <footer className="bg-gray-800 text-white py-8 text-center">
         <Container fluid>
           <Row className="d-flex justify-content-center align-items-center text-center">
             <Col className="d-flex justify-content-center align-items-center flex-col">
@@ -20,20 +20,26 @@ export const Footer = () => {
       </footer>
 
       {/* Back to Top Button */}
-      <button
+      <Button
         onClick={scrollToTop}
-        className="fixed bg-black border-none p-4 rounded-full cursor-pointer shadow-lg flex items-center justify-center hover:bg-gray-900 transition-colors"
         style={{
+          position: 'fixed',
           bottom: '20px',
           right: '20px',
-          width: '56px',
-          height: '56px',
+          backgroundColor: 'black',
+          border: 'none',
+          color: 'white',
+          padding: '1rem',
+          borderRadius: '50%',
+          cursor: 'pointer',
+          fontSize: '1.5rem',
+          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
           zIndex: 100,
         }}
-        aria-label="Back to top"
+        className="d-flex align-items-center justify-content-center"
       >
-        <FaArrowUp size={24} color="#FFE4E1" />
-      </button>
+        <FaArrowUp size={30} color="#FFE4E1" />
+      </Button>
     </>
   );
 };
