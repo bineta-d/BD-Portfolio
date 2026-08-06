@@ -8,9 +8,9 @@ import { IoDownloadOutline, IoLogoLinkedin, IoLogoGithub, IoMail } from "react-i
 
 export const About = () => {
   return (
-    <div className="holder mb-0">
-      <div id="about-title" className="about-content pt-1 text-center" style={{ backgroundColor: "#FFE4E1" }}>
-        <Container fluid style={{ backgroundColor: "#FFE4E1", padding: '2.5rem 1rem' }}>
+    <div className="holder mb-0" style={{margin: 0, padding: 0}}>
+      <div id="about-title" className="about-content pt-1 text-center" style={{ backgroundColor: "#FFE4E1", margin: 0 }}>
+        <Container fluid style={{ backgroundColor: "#FFE4E1", padding: '2.5rem 1rem', margin: 0 }}>
           <h2 className="fw-bold text-center" style={{ fontSize: "2.8rem", marginBottom: "1rem", fontWeight: 600 }}>About</h2>
           <div className="about-content-row">
             <div className="about-icons-col">

@@ -25,24 +25,26 @@ const App = () => {
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
       </Helmet>
       
-      <Navbar expand="lg" bg="dark" variant="dark" fixed="top" className="navbar-expand-lg p-1">
+      <Navbar expand="lg" bg="light" variant="dark" fixed="top" className="navbar-expand-lg p-1">
         <Container className="d-flex justify-content-between">
-          <Navbar.Brand href="#home" >Welcome!</Navbar.Brand>
+          <Navbar.Brand href="#home" className="text-dark">Welcome!</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav"  >
             <Nav className="ms-auto" >
-              <Nav.Link as={Link} to="about" smooth={true} duration={1000}>About</Nav.Link>
-              <Nav.Link as={Link} to="skills" smooth={true} duration={1000}>Skills</Nav.Link>
-              <Nav.Link as={Link} to="projects" smooth={true} duration={1000}>Projects</Nav.Link>
-              <Nav.Link as={Link} to="contact" smooth={true} duration={1000}>Contact</Nav.Link>
-              <Nav.Link as={Link} to="more" smooth={true} duration={1000}>More</Nav.Link>
-              <Nav.Link href="/BD-Resume-25-copy.pdf" target="_blank" download style={{color:"white", display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+              <Nav.Link as={Link} to="about" smooth={true} duration={1000} className="text-dark">About</Nav.Link>
+              <Nav.Link as={Link} to="skills" smooth={true} duration={1000} className="text-dark">Skills</Nav.Link>
+              <Nav.Link as={Link} to="projects" smooth={true} duration={1000} className="text-dark">Projects</Nav.Link>
+              <Nav.Link as={Link} to="contact" smooth={true} duration={1000} className="text-dark">Contact</Nav.Link>
+              <Nav.Link as={Link} to="more" smooth={true} duration={1000} className="text-dark">More</Nav.Link>
+              <Nav.Link href="/BD-Resume-25-copy.pdf" target="_blank" download className="text-dark" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
                 Resume <IoDownloadOutline size={24} style={{marginLeft: '2px'}} />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      <hr className="navbar-divider "  />
 
       <div>
         <Hero/>

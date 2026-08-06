@@ -93,9 +93,9 @@ export const Projects = () => {
 	};
 
 	return (
-		<section id="projects-section" style={{ background: '#FFE4E1', width: '100%', padding: '2rem 0 0 0', margin: 0 }}>
-			<div className="projects-content pt-3 text-center" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-				<Container fluid style={{ backgroundColor: "#FFE4E1", display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1700px', margin: '0 auto', padding: '0.5rem 1rem 1.5rem 1rem' }}>
+		<section id="projects-section" style={{ background: '#FFE4E1', width: '100%', padding: '2rem 0 0 0', margin: 0, border: 'none' }}>
+			<div className="projects-content pt-3 text-center" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: 0 }}>
+				<Container fluid style={{ backgroundColor: "#FFE4E1", display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1700px', margin: '0 auto', padding: '0.5rem 1rem 0 1rem' }}>
 					<div className="title" style={{ width: '100%', textAlign: 'center', marginTop: '0.1rem' }}>
 						<h2 className="projects-title fw-bold mb-2" style={{ fontSize: "clamp(2rem, 5vw, 2.8rem)", marginBottom: '1.2rem', textAlign: 'center', fontWeight: 600 }}>Projects</h2>
 					</div>
@@ -244,14 +244,14 @@ export const Projects = () => {
 									flexDirection: 'column',
 									alignItems: 'center',
 									justifyContent: 'center',
-									padding: columns === 1 ? '4vw 2vw' : '5vw 6vw',
+									padding: '3rem 2rem',
 									width: '100%',
 									maxWidth: '100%',
 									boxSizing: 'border-box',
 									textAlign: 'center',
 									margin: '0 auto',
 								}}>
-									<img src={activeProject.image} alt={activeProject.title} style={{ width: columns === 1 ? '90vw' : '100%', maxWidth: columns === 1 ? '320px' : '420px', height: columns === 1 ? '160px' : '260px', objectFit: 'cover', borderRadius: '1.5rem', marginBottom: '1.2rem', background: '#f5f5f5' }} />
+									<img src={activeProject.image} alt={activeProject.title} style={{ width: '100%', maxWidth: '380px', height: '260px', objectFit: 'cover', borderRadius: '1.5rem', marginBottom: '1.5rem', background: '#f5f5f5' }} />
 									{activeProject.details.split(/\n|\n/).map((line, idx) => {
 										if (line.trim().toLowerCase().startsWith('live site:')) {
 											const url = line.split('Live Site:')[1].trim();
@@ -271,10 +271,10 @@ export const Projects = () => {
 						)}
 					</Modal>
 
-					<Row className="justify-content-center" style={{marginTop: '-1.5rem', paddingTop: 0}}>
+					<Row className="justify-content-center" style={{marginTop: '2rem', paddingTop: '1.5rem', paddingBottom: '1.5rem', width: '100%', position: 'relative', zIndex: 10, background: '#FFE4E1'}}>
 						<Col xs="auto">
-							<a href="https://github.com/bineta-d" style={{ textDecoration: "none" }} target="_blank">
-								<button type="button" className="btn btn-lg btn-portfolio text-center" data-bs-toggle="button" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginBottom: 0, marginTop: 0, paddingTop: 0 }}>
+							<a href="https://github.com/bineta-d" style={{ textDecoration: "none" }} target="_blank" rel="noopener noreferrer">
+								<button type="button" className="btn btn-lg btn-portfolio text-center" data-bs-toggle="button" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginBottom: 0, marginTop: 0, fontSize: '0.95rem', padding: '0.6rem 1.8rem', minHeight: '2.4rem' }}>
 									View My Github
 								</button>
 							</a>

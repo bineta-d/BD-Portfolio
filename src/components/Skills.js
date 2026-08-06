@@ -15,7 +15,9 @@ import {
   SiTypescript,
   SiSwift,
   SiNodedotjs,
-  SiMongodb
+  SiMongodb,
+  SiFigma,
+  SiDart
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import "../App.css";
@@ -35,11 +37,13 @@ export const Skills = () => {
     { icon: <SiMysql size={80} color="#00758f" />, name: "MySQL" },
     { icon: <SiTailwindcss size={80} color="#38bdf8" />, name: "Tailwind CSS" },
     { icon: <div style={{width: '80px', height: '80px', backgroundColor: '#5DADE2', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '12px', fontWeight: 'bold'}}>Flutter</div>, name: "Flutter" },
+    { icon: <SiFigma size={80} color="#F24E1E" />, name: "Figma" },
+    { icon: <SiDart size={80} color="#0175C2" />, name: "Dart" },
   ];
 
   return (
-    <div className="holder px-2 pb-0" style={{backgroundColor: '#FFE4E1', padding: '2rem 1rem 0 1rem', margin: 0}}>
-      <div className="skills-content" id="skills-content" style={{padding: '1rem 0 0 0'}}>
+    <div className="holder px-2 pb-0" style={{backgroundColor: '#FFE4E1', padding: '2rem 1rem 0 1rem', margin: 0, border: 'none'}}>
+      <div className="skills-content" id="skills-content" style={{padding: '1rem 0 0 0', margin: 0}}>
         <div className="title" id="skills-title">
           <h2 className="fw-bold" style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 600 }}>Skills & Experience</h2>
         </div>

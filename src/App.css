@@ -9,6 +9,7 @@ body {
   position: relative;
   margin: 0;
   overflow-x: hidden;
+  background-color: #FFE4E1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,6 +42,7 @@ p {
   /* font-family remains as set globally, do not override here */
   font-weight: 400;
   letter-spacing: 0.03em;
+  margin: 0;
 }
 
 .navbar {
@@ -70,6 +72,11 @@ p {
 
 .section h1 {
   font-size: 2rem;
+}
+
+section {
+  margin: 0;
+  padding: 0;
 }
 
 .pt-6 {
@@ -233,6 +240,10 @@ p {
   padding-bottom: 0rem !important;
   background-color: #FFE4E1;
   margin: 0;
+  border: none;
+}
+.holder + .holder {
+  margin-top: 0;
 }
 .holder button{
   color: black;
@@ -299,6 +310,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   background-color: #FFE4E1;
+  margin: 0;
 }
 
 .skills-carousel {
@@ -307,7 +319,7 @@ p {
   gap: 2.5rem;
   align-items: center;
   width: max-content;
-  animation: scroll-x 10s linear infinite;
+  animation: scroll-x 20s linear infinite;
 }
 
 @keyframes scroll-x {

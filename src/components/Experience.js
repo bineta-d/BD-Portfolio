@@ -44,14 +44,14 @@ const experienceData = [
 
 const Experience = () => {
 	return (
-		<div className="holder" id="experience">
-			<Container fluid className="experience-section p-5 text-center" style={{padding: '2rem 1rem !important'}}>
+		<div className="holder" id="experience" style={{margin: 0, padding: 0}}>
+			<Container fluid className="experience-section p-5 text-center" style={{padding: '2rem 2rem !important', margin: 0, maxWidth: '1400px', marginLeft: 'auto', marginRight: 'auto'}}>
 				<div className="title">
 					<h2 className="experience-title fw-bold mb-3" style={{ fontSize: "2.8rem", fontWeight: 600 }}>
 						Experience
 					</h2>
 				</div>
-				<div className="experience-list experience-list-multi">
+				<div className="experience-list experience-list-multi" style={{maxWidth: '1300px', margin: '0 auto', paddingLeft: '1rem', paddingRight: '1rem'}}>
 					{experienceData.map((exp, idx) => (
 						<div className="experience-card active" key={idx}>
 							<div className="exp-header">
