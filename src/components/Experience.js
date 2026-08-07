@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Experience.css";
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 const experienceData = [
 	{
@@ -43,40 +44,58 @@ const experienceData = [
 ];
 
 const Experience = () => {
+	const [currentIndex, setCurrentIndex] = useState(0);
+
+	const handlePrevious = () => {
+		setCurrentIndex((prev) => (prev === 0 ? experienceData.length - 1 : prev - 1));
+	};
+
+	const handleNext = () => {
+		setCurrentIndex((prev) => (prev === experienceData.length - 1 ? 0 : prev + 1));
+	};
+
 	return (
-		<div className="holder" id="experience" style={{margin: 0, padding: 0}}>
-			<Container fluid className="experience-section p-5 text-center" style={{padding: '2rem 2rem !important', margin: 0, maxWidth: '1400px', marginLeft: 'auto', marginRight: 'auto'}}>
+		<div className="holder" id="experience" style={{ margin: 0, padding: 0 }}>
+			<Container fluid className="experience-section p-5 text-center" style={{ padding: '2rem 2rem !important', margin: 0, maxWidth: '1400px', marginLeft: 'auto', marginRight: 'auto' }}>
 				<div className="title">
 					<h2 className="experience-title fw-bold mb-3" style={{ fontSize: "2.8rem", fontWeight: 600 }}>
 						Experience
 					</h2>
 				</div>
-				<div className="experience-list experience-list-multi" style={{maxWidth: '1300px', margin: '0 auto', paddingLeft: '1rem', paddingRight: '1rem'}}>
-					{experienceData.map((exp, idx) => (
-						<div className="experience-card active" key={idx}>
-							<div className="exp-header">
-								<h3 className="exp-role">{exp.role}</h3>
-								<span className="exp-company">{exp.company}</span>
+				<div className="experience-slider">
+					<div className="exp-arrow-icon left" onClick={handlePrevious}>
+						<IoChevronBack size={32} color="#232323" />
+					</div>
+					<div className="experience-list experience-list-multi" style={{ maxWidth: '1300px', margin: '0 auto', paddingLeft: '1rem', paddingRight: '1rem' }}>
+						{experienceData.map((exp, idx) => (
+							<div className={`experience-card ${idx === currentIndex ? 'active' : ''}`} key={idx} style={{ display: idx === currentIndex ? 'flex' : 'none' }}>
+								<div className="exp-header">
+									<h3 className="exp-role">{exp.role}</h3>
+									<span className="exp-company">{exp.company}</span>
+								</div>
+								<div className="exp-meta">
+									<span className="exp-date">{exp.date}</span> | <span className="exp-location">{exp.location}</span>
+									{exp.team && <><br /><span className="exp-team" style={{ fontSize: '0.95rem', color: '#555' }}><strong>Team:</strong> {exp.team}</span></>}
+								</div>
+								<div className="exp-stack">
+									{exp.concepts && (
+										<><strong>Concepts:</strong> {exp.concepts}</>
+									)}
+									{exp.stack && (
+										<><strong>Tech Stack:</strong> {exp.stack}</>
+									)}
+								</div>
+								<ul className="exp-details">
+									{exp.details.map((d, i) => (
+										<li key={i}>{d}</li>
+									))}
+								</ul>
 							</div>
-							<div className="exp-meta">
-								<span className="exp-date">{exp.date}</span> | <span className="exp-location">{exp.location}</span>
-								{exp.team && <><br/><span className="exp-team" style={{fontSize: '0.95rem', color: '#555'}}><strong>Team:</strong> {exp.team}</span></>}
-							</div>
-							<div className="exp-stack">
-								{exp.concepts && (
-									<><strong>Concepts:</strong> {exp.concepts}</>
-								)}
-								{exp.stack && (
-									<><strong>Tech Stack:</strong> {exp.stack}</>
-								)}
-							</div>
-							<ul className="exp-details">
-								{exp.details.map((d, i) => (
-									<li key={i}>{d}</li>
-								))}
-							</ul>
-						</div>
-					))}
+						))}
+					</div>
+					<div className="exp-arrow-icon right" onClick={handleNext}>
+						<IoChevronForward size={32} color="#232323" />
+					</div>
 				</div>
 			</Container>
 		</div>

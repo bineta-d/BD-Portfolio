@@ -30,13 +30,13 @@ export const About = () => {
                 I'm Bineta Diatta, a software engineer experienced in mobile, web and full stack development. With a strong foundation in computer science principles and a passion for creating innovative solutions to complex problems within my communities and beyond. 
                 <hr/>My goal is to leverage my skills and knowledge to contribute to impactful projects and make a positive difference in the technology industry and the world. As a former Division I athlete, I am well versed in team collaboration, leadership, and time management and bring a unique perspective to software engineering, combining my technical skills with the ability to work effectively in high-pressure environments.
               </p>
-              <div className= "text-center px-5">
+              <div className= "text-center px-5" style={{maxWidth: '100%', overflow: 'hidden'}}>
                  <h3 style={{fontSize: '1.6rem', fontWeight: '700', marginBottom: '0.8rem', color: '#232323'}}>Education</h3>
-                 <p className="text-start about-paragraph">
+                 <p className="text-start about-paragraph" style={{maxWidth: '100%', overflow: 'hidden', wordWrap: 'break-word'}}>
                    <strong> Florida International University (2026)</strong><br/>
                    <em>Bachelors of Science (B.S.) in Computer Science</em>
                  </p>    
-                <p className="text-start focus-text">Focus: <strong>Software Design & Development</strong></p>
+                <p className="text-start focus-text" style={{maxWidth: '100%', overflow: 'hidden'}}>Focus: <strong>Software Design & Development</strong></p>
 
               </div>
             </div>
