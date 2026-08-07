@@ -25,19 +25,19 @@ export const About = () => {
                 </a>
               </div>
             </div>
-            <div className="about-text-col px-2 mx-auto" style={{marginTop:0, textAlign: 'center', maxWidth: '100%', width: '100%', paddingLeft: '1rem', paddingRight: '1rem'}}>
-                 <p className="text-start about-paragraph" style={{marginBottom: "1.5rem", maxWidth: '100%', marginLeft: 'auto', marginRight: 'auto'}}>
+            <div className="about-text-col px-auto text-center" >
+                 <p className="text-center about-paragraph px-4 py-2" >
                 I'm Bineta Diatta, a software engineer experienced in mobile, web and full stack development. With a strong foundation in computer science principles and a passion for creating innovative solutions to complex problems within my communities and beyond. 
-                My goal is to leverage my skills and knowledge to contribute to impactful projects and make a positive difference in the technology industry and the world.
-                <br/> As a former Division I athlete, I am well versed in team collaboration, leadership, and time management and bring a unique perspective to software engineering, combining my technical skills with the ability to work effectively in high-pressure environments.
+                <hr/>My goal is to leverage my skills and knowledge to contribute to impactful projects and make a positive difference in the technology industry and the world. As a former Division I athlete, I am well versed in team collaboration, leadership, and time management and bring a unique perspective to software engineering, combining my technical skills with the ability to work effectively in high-pressure environments.
               </p>
-              <div style={{maxWidth: '75%', marginLeft: 'auto', marginRight: 'auto', textAlign: 'start'}}>
+              <div className= "text-center px-5">
                  <h3 style={{fontSize: '1.6rem', fontWeight: '700', marginBottom: '0.8rem', color: '#232323'}}>Education</h3>
-                 <p className="text-start about-paragraph" style={{marginBottom: "0rem", maxWidth: '100%'}}>
-                   <strong>Florida International University (FIU)</strong><br/>
-                   Bachelors of Science (B.S.) in Computer Science<br/>
-                   <em>Focus: Software Design & Development</em>
-                 </p>
+                 <p className="text-start about-paragraph">
+                   <strong> Florida International University (2026)</strong><br/>
+                   <em>Bachelors of Science (B.S.) in Computer Science</em>
+                 </p>    
+                <p className="text-start focus-text">Focus: <strong>Software Design & Development</strong></p>
+
               </div>
             </div>
           </div>

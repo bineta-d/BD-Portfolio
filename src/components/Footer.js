@@ -25,7 +25,7 @@ export const Footer = () => {
         style={{
           position: 'fixed',
           bottom: '20px',
-          right: '25px',
+          right: '60px',
           backgroundColor: 'black',
           border: 'none',
           color: 'white',
