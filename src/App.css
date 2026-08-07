@@ -372,10 +372,13 @@ section {
     align-items: flex-start;
   }
   .navbar-collapse {
-    background: #222;
+    background: #f8f9fa !important;
     padding: 1rem 0.5rem;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .navbar-collapse .nav-link {
+    color: #232323 !important;
   }
   .navbar-brand {
     font-size: 1.5rem !important;
@@ -383,6 +386,7 @@ section {
   .nav-link {
     font-size: 1.1rem !important;
     padding: 0.6rem 0.8rem !important;
+    color: #232323 !important;
   }
 }
 
@@ -454,23 +458,24 @@ section {
 
 @media (max-width: 900px) {
   .learn-more-btns-grid {
-    flex-direction: column !important;
+    flex-direction: row;
     gap: 0.8rem;
-    max-width: 98vw;
-    align-items: stretch !important;
+    max-width: 98%;
+    align-items: center;
     width: 100%;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 600px) {
   .learn-more-btns-grid {
-    flex-direction: row !important;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    max-width: 99vw;
-    align-items: stretch !important;
+    gap: 0.8rem;
+    max-width: 90%;
+    align-items: center;
     width: 100%;
     overflow-x: hidden;
+    padding: 0 1rem;
   }
 }
 .learn-more-btns-grid .learn-more-btn,
@@ -505,13 +510,14 @@ section {
 @media (max-width: 600px) {
   .learn-more-btns-grid .learn-more-btn,
   .learn-more-btns-grid .btn-portfolio {
-    min-width: 100px;
-    max-width: 220px;
-    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
     min-height: 2rem;
     height: auto;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 0.8rem;
     font-size: 0.9rem;
+    margin: 0;
   }
 }
 

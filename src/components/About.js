@@ -26,12 +26,12 @@ export const About = () => {
               </div>
             </div>
             <div className="about-text-col px-2 mx-auto" style={{marginTop:0, textAlign: 'center', maxWidth: '100%', width: '100%', paddingLeft: '1rem', paddingRight: '1rem'}}>
-                 <p className="text-start about-paragraph" style={{marginBottom: "1.5rem", maxWidth: '100%', marginLeft: 'auto', marginRight: 'auto', }}>
+                 <p className="text-start about-paragraph" style={{marginBottom: "1.5rem", maxWidth: '100%', marginLeft: 'auto', marginRight: 'auto'}}>
                 I'm Bineta Diatta, a software engineer experienced in mobile, web and full stack development. With a strong foundation in computer science principles and a passion for creating innovative solutions to complex problems within my communities and beyond. 
                 My goal is to leverage my skills and knowledge to contribute to impactful projects and make a positive difference in the technology industry and the world.
                 <br/> As a former Division I athlete, I am well versed in team collaboration, leadership, and time management and bring a unique perspective to software engineering, combining my technical skills with the ability to work effectively in high-pressure environments.
               </p>
-              <div style={{maxWidth: '100%', marginLeft: 'auto', marginRight: 'auto', textAlign: 'start'}}>
+              <div style={{maxWidth: '75%', marginLeft: 'auto', marginRight: 'auto', textAlign: 'start'}}>
                  <h3 style={{fontSize: '1.6rem', fontWeight: '700', marginBottom: '0.8rem', color: '#232323'}}>Education</h3>
                  <p className="text-start about-paragraph" style={{marginBottom: "0rem", maxWidth: '100%'}}>
                    <strong>Florida International University (FIU)</strong><br/>
@@ -57,7 +57,7 @@ export const About = () => {
             <Nav.Link as={Link} to="experience-title" smooth={true} duration={600} offset={-70}>
               <button type ="button" className="learn-more-btn" data-bs-toggle="button">Experience</button>
             </Nav.Link>
-            {/* <Nav.Link href="/BD-Resume-25-copy.pdf" download className="text-decoration-none">
+            {/* <Nav.Link href="/BD-Resume-25-copy.pdf" target="_blank" download className="text-decoration-none">
               <button type="button" className="learn-more-btn" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
                 Resume <IoDownloadOutline size={24} style={{marginLeft: '8px'}} />
               </button>

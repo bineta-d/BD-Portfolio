@@ -24,7 +24,7 @@ const App = () => {
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
       </Helmet>
       
-      <Navbar expand="lg" bg="light" variant="light" fixed="top" className="navbar-expand-lg p-1" style={{borderBottom: '1px solid #e0e0e0'}}>
+      <Navbar expand="lg" bg="light" variant="dark" fixed="top" className="navbar-expand-lg p-1">
         <Container className="d-flex justify-content-between">
           <Navbar.Brand href="#home" className="text-dark">Welcome!</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
