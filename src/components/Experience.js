@@ -115,6 +115,15 @@ const Experience = () => {
 						<IoChevronForward size={32} color="#232323" />
 					</div>
 				</div>
+				<div className="experience-dots">
+					{experienceData.map((_, idx) => (
+						<div
+							key={idx}
+							className={`experience-dot ${idx === currentIndex ? 'active' : ''}`}
+							onClick={() => setCurrentIndex(idx)}
+						/>
+					))}
+				</div>
 			</Container>
 		</div>
 	);

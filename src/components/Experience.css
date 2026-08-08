@@ -190,3 +190,37 @@
 .exp-arrow-icon.right {
   right: 0;
 }
+
+.experience-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.experience-dot.active {
+  background: #232323;
+  transform: scale(1.2);
+}
+
+.experience-dot:hover {
+  background: #999;
+}
+
+.experience-dot.active:hover {
+  background: #232323;
+}
