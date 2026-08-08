@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
 import "../App.css";
-import { IoDownloadOutline, IoLogoLinkedin, IoLogoGithub, IoMail } from "react-icons/io5";
+import { IoLogoLinkedin, IoLogoGithub, IoMail } from "react-icons/io5";
 
 export const About = () => {
   return (
