@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-scroll";
@@ -16,26 +16,32 @@ import Experience from "./components/Experience";
 
 
 const App = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleNavClick = () => {
+    setExpanded(false);
+  };
+
   return (
     <>
-    <Helmet>
+      <Helmet>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </Helmet>
-      
-      <Navbar expand="lg" bg="light" variant="dark" fixed="top" className="navbar-expand-lg p-1">
+
+      <Navbar expand="lg" bg="light" variant="dark" fixed="top" className="navbar-expand-lg p-1" expanded={expanded} onToggle={setExpanded}>
         <Container className="d-flex justify-content-between">
           <Navbar.Brand href="#home" className="text-dark">Welcome!</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav"  >
             <Nav className="ms-auto" >
-              <Nav.Link as={Link} to="about" smooth={true} duration={1000} offset={-100} className="text-dark">About</Nav.Link>
-              <Nav.Link as={Link} to="skills" smooth={true} duration={1000} offset={-100} className="text-dark">Skills</Nav.Link>
-              <Nav.Link as={Link} to="experience" smooth={true} duration={1000} offset={-100} className="text-dark">Experience</Nav.Link>
-              <Nav.Link as={Link} to="projects" smooth={true} duration={1000} offset={-100} className="text-dark">Projects</Nav.Link>
-              <Nav.Link as={Link} to="contact" smooth={true} duration={1000} offset={-100} className="text-dark">Contact</Nav.Link>
-              <Nav.Link as={Link} to="more" smooth={true} duration={1000} offset={-100} className="text-dark">More</Nav.Link>
+              <Nav.Link as={Link} to="about" smooth={true} duration={1000} offset={-100} className="text-dark" onClick={handleNavClick}>About</Nav.Link>
+              <Nav.Link as={Link} to="skills" smooth={true} duration={1000} offset={-100} className="text-dark" onClick={handleNavClick}>Skills</Nav.Link>
+              <Nav.Link as={Link} to="experience" smooth={true} duration={1000} offset={-100} className="text-dark" onClick={handleNavClick}>Experience</Nav.Link>
+              <Nav.Link as={Link} to="projects" smooth={true} duration={1000} offset={-100} className="text-dark" onClick={handleNavClick}>Projects</Nav.Link>
+              <Nav.Link as={Link} to="contact" smooth={true} duration={1000} offset={-100} className="text-dark" onClick={handleNavClick}>Contact</Nav.Link>
+              <Nav.Link as={Link} to="more" smooth={true} duration={1000} offset={-100} className="text-dark" onClick={handleNavClick}>More</Nav.Link>
               {/* <Nav.Link href="/BD-Resume-25-copy.pdf" target="_blank" download className="text-dark" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
                 Resume <IoDownloadOutline size={24} style={{marginLeft: '2px'}} />
               </Nav.Link> */}
@@ -44,53 +50,53 @@ const App = () => {
         </Container>
       </Navbar>
 
-      <hr className="navbar-divider "  />
+      <hr className="navbar-divider " />
 
       <div>
-        <Hero/>
+        <Hero />
       </div>
-    
+
       <div fluid className="section  text-center" id="about">
-      <About/>
- 
+        <About />
+
       </div>
 
       <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="skills">
-      <Skills/>
+        <Skills />
       </div>
 
       <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="experience">
-        <Experience/>
+        <Experience />
       </div>
 
       <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="projects">
-      <Projects/>      
-    
+        <Projects />
+
       </div>
 
       <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="contact">
-      <Contact/>
+        <Contact />
       </div>
 
       <div className="section-divider"></div>
 
       <div fluid className="section text-center" id="more">
-      <Affiliations/>
+        <Affiliations />
       </div>
 
       <div fluid className="section text-center" id="more">
-      <Footer/>
+        <Footer />
       </div>
 
-      
+
     </>
   );
 };
