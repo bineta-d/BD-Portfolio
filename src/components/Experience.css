@@ -8,7 +8,7 @@
 
 .experience-slider {
   position: relative;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   min-height: 340px;
   display: flex;
@@ -130,7 +130,7 @@
 
   .experience-card {
     width: auto !important;
-    max-width: 95vw !important;
+    max-width: 75vw !important;
     min-width: 0 !important;
     height: auto !important;
     min-height: auto !important;
@@ -154,8 +154,6 @@
   }
 
   .experience-slider {
-    padding-left: 1vw;
-    padding-right: 1vw;
     max-width: 100%;
   }
 
@@ -170,7 +168,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 0 1.2rem;
+  margin: 0 0.6rem;
   user-select: none;
   transition: color 0.2s;
   z-index: 10;

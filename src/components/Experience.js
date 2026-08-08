@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Experience.css";
@@ -45,13 +45,31 @@ const experienceData = [
 
 const Experience = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const sliderRef = useRef(null);
 
 	const handlePrevious = () => {
-		setCurrentIndex((prev) => (prev === 0 ? experienceData.length - 1 : prev - 1));
+		setCurrentIndex((prev) => (prev === 0 ? 0 : prev - 1));
 	};
 
 	const handleNext = () => {
-		setCurrentIndex((prev) => (prev === experienceData.length - 1 ? 0 : prev + 1));
+		setCurrentIndex((prev) => (prev === experienceData.length - 1 ? experienceData.length - 1 : prev + 1));
+	};
+
+	const handleTouchStart = (e) => {
+		const touchStart = e.touches[0].clientX;
+		const handleTouchEnd = (e) => {
+			const touchEnd = e.changedTouches[0].clientX;
+			const swipeDistance = touchStart - touchEnd;
+			if (Math.abs(swipeDistance) > 50) {
+				if (swipeDistance > 0) {
+					handleNext();
+				} else {
+					handlePrevious();
+				}
+			}
+			sliderRef.current.removeEventListener('touchend', handleTouchEnd);
+		};
+		sliderRef.current.addEventListener('touchend', handleTouchEnd);
 	};
 
 	return (
@@ -62,7 +80,7 @@ const Experience = () => {
 						Experience
 					</h2>
 				</div>
-				<div className="experience-slider">
+				<div className="experience-slider" ref={sliderRef} onTouchStart={handleTouchStart}>
 					<div className="exp-arrow-icon left" onClick={handlePrevious}>
 						<IoChevronBack size={32} color="#232323" />
 					</div>

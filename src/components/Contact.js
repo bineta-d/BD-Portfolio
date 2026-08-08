@@ -34,7 +34,7 @@ const Contact = () => (
 				<p className="text-xl text-center m-0 text-gray-600 font-medium">
 					Feel free to reach out here:
 				</p>
-				<div className="flex gap-3 items-center mb-0 mt-0 contact-icons">
+				<div className="flex gap-6 items-center mb-0 mt-0 contact-icons">
 					{socials.map((social) => (
 						<a
 							key={social.name}
