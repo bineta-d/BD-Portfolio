@@ -48,7 +48,7 @@ export const Skills = () => {
       </div>
       {/* Cycling Carousel */}
       <div className="skills-carousel-wrapper">
-        <div className="skills-carousel">
+        <div className="skills-carousel pb-3">
           {[...skills, ...skills].map((skill, idx) => (
             <div className="skill-icon" key={idx}>
               {skill.icon}
