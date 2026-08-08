@@ -115,8 +115,7 @@ section {
   background-size: cover;
   min-height: 100vh;
   padding-top: 50px;
-  width: 100%;
-  /* was 100vw, now responsive */
+  width: 100vw;
   color: white;
   display: flex;
   justify-content: center;
@@ -149,9 +148,7 @@ section {
 .hero-content {
   z-index: 2;
   padding: 20px;
-  /* transform: scale(1.1); */
-  font-size: 1.1em;
-  /* Responsive replacement for scale */
+  transform: scale(1.1);
 }
 
 .hero-content h1 {

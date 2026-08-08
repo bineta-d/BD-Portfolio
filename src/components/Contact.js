@@ -45,6 +45,7 @@ const Contact = () => (
 							style={{
 								width: 44,
 								height: 44,
+
 							}}
 							aria-label={social.name}
 						>
@@ -55,6 +56,7 @@ const Contact = () => (
 								style={{
 									width: 32,
 									height: 32,
+									margin: 10,
 								}}
 							/>
 						</a>
