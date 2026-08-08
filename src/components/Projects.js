@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { IoImage } from "react-icons/io5";
 
 const projectData = [
 	{
@@ -41,7 +42,7 @@ const projectData = [
 		description: [
 			"SwiftUI movie search & social app"
 		],
-		details: `CinePals — iOS Application  (February 2025 - April 2025)\n• Created API endpoints to serve responsive movie search interface with debounced input handling for less API calls.\n• Implemented dynamic UI screens in Swift (cast, runtime, trailers) using data from The Movie Database (TMDb) API.\n• Integrated Firebase to fetch and dynamically render user profiles on client upon search and for a personalized UX, built with a team of student developers.\n\nTech Stack: Swift, SwiftUI, Firebase, Xcode, MVC principles, TMDb API` ,
+		details: `CinePals — iOS Application  (February 2025 - April 2025)\n• Created API endpoints to serve responsive movie search interface with debounced input handling for less API calls.\n• Implemented dynamic UI screens in Swift (cast, runtime, trailers) using data from The Movie Database (TMDb) API.\n• Integrated Firebase to fetch and dynamically render user profiles on client upon search and for a personalized UX, built with a team of student developers.\n\nTech Stack: Swift, SwiftUI, Firebase, Xcode, MVC principles, TMDb API`,
 		image: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
 		link: "https://youtube.com/shorts/bJ6iVZQMlqU?si=AF3ASCg5gWDmHfPV",
 	},
@@ -61,7 +62,7 @@ const projectData = [
 		description: [
 			"Book recommendation REST API"
 		],
-		details: `Users can discover new books and authors while sorting results based on various criteria. Features include retrieving books by genre, top sellers, and ratings, as well as updating book prices by publisher. Built using REST API principles, handling GET and PUT/PATCH requests to manage book data effectively.\n\nTech Stack: Java, Spring Boot, SQL, Postman` ,
+		details: `Users can discover new books and authors while sorting results based on various criteria. Features include retrieving books by genre, top sellers, and ratings, as well as updating book prices by publisher. Built using REST API principles, handling GET and PUT/PATCH requests to manage book data effectively.\n\nTech Stack: Java, Spring Boot, SQL, Postman`,
 		image: "geek.avif",
 		link: "https://github.com/bineta-d/Geek-Test",
 	},
@@ -128,26 +129,43 @@ export const Projects = () => {
 								boxSizing: 'border-box',
 								transition: 'transform 0.2s, box-shadow 0.2s',
 							}}
-							onMouseEnter={e => {
-								e.currentTarget.style.transform = 'translateY(-4px)';
-								e.currentTarget.style.boxShadow = '0 8px 48px rgba(0,0,0,0.15)';
-							}}
-							onMouseLeave={e => {
-								e.currentTarget.style.transform = 'translateY(0)';
-								e.currentTarget.style.boxShadow = '0 4px 32px rgba(0,0,0,0.10)';
-							}}>
-								<img
-									src={project.image}
-									alt={project.title}
-									style={{
-										width: '100%',
-										height: '180px',
-										objectFit: 'cover',
-										borderRadius: '1.2rem',
-										marginBottom: '1rem',
-										background: '#f5f5f5',
-									}}
-								/>
+								onMouseEnter={e => {
+									e.currentTarget.style.transform = 'translateY(-4px)';
+									e.currentTarget.style.boxShadow = '0 8px 48px rgba(0,0,0,0.15)';
+								}}
+								onMouseLeave={e => {
+									e.currentTarget.style.transform = 'translateY(0)';
+									e.currentTarget.style.boxShadow = '0 4px 32px rgba(0,0,0,0.10)';
+								}}>
+								{project.image === "placeholder-thecommit.png" ? (
+									<div
+										style={{
+											width: '100%',
+											height: '180px',
+											display: 'flex',
+											alignItems: 'center',
+											justifyContent: 'center',
+											borderRadius: '1.2rem',
+											marginBottom: '1rem',
+											background: '#f5f5f5',
+										}}
+									>
+										<IoImage size={64} color="#999" />
+									</div>
+								) : (
+									<img
+										src={project.image}
+										alt={project.title}
+										style={{
+											width: '100%',
+											height: '180px',
+											objectFit: 'cover',
+											borderRadius: '1.2rem',
+											marginBottom: '1rem',
+											background: '#f5f5f5',
+										}}
+									/>
+								)}
 								<h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.2rem', textAlign: 'center', width: '100%' }}>{project.title}</h2>
 								{project.description && project.description[0] && (
 									<div style={{
@@ -172,7 +190,7 @@ export const Projects = () => {
 										width: '100%',
 										marginTop: 'auto',
 										paddingTop: '0.8rem',
-										flexDirection: columns === 1 ? 'column' : 'row',
+										flexDirection: 'row',
 									}}
 								>
 									<a
@@ -196,8 +214,8 @@ export const Projects = () => {
 											transition: 'background 0.2s',
 											textDecoration: 'none',
 											margin: 0,
-										flex: columns === 1 ? '1 1 100%' : '1 1 auto',
-									}}
+											flex: '1 1 auto',
+										}}
 										onMouseOver={e => e.currentTarget.style.background = '#333'}
 										onMouseOut={e => e.currentTarget.style.background = '#111'}
 									>
@@ -220,7 +238,7 @@ export const Projects = () => {
 											transition: 'background 0.2s',
 											textDecoration: 'none',
 											margin: 0,
-											flex: columns === 1 ? '1 1 100%' : '1 1 auto',
+											flex: '1 1 auto',
 										}}
 										onClick={() => handleShowModal(project)}
 										onMouseOver={e => e.currentTarget.style.background = '#333'}
@@ -279,7 +297,7 @@ export const Projects = () => {
 						)}
 					</Modal>
 
-					<Row className="justify-content-center" style={{marginTop: '2rem', paddingTop: '1.5rem', paddingBottom: '1.5rem', width: '100%', position: 'relative', zIndex: 10, background: '#FFE4E1'}}>
+					<Row className="justify-content-center" style={{ marginTop: '2rem', paddingTop: '1.5rem', paddingBottom: '1.5rem', width: '100%', position: 'relative', zIndex: 10, background: '#FFE4E1' }}>
 						<Col xs="auto">
 							<a href="https://github.com/bineta-d" style={{ textDecoration: "none" }} target="_blank" rel="noopener noreferrer">
 								<button type="button" className="btn btn-lg btn-portfolio text-center" data-bs-toggle="button" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginBottom: 0, marginTop: 0, fontSize: '0.95rem', padding: '0.6rem 1.8rem', minHeight: '2.4rem' }}>
