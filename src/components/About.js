@@ -27,8 +27,9 @@ export const About = () => {
             </div>
             <div className="about-text-col px-auto text-center" >
               <p className="text-center about-paragraph px-4 py-2" >
-                I'm Bineta Diatta, a software engineer experienced in mobile, web and full stack development. With a strong foundation in computer science principles and a passion for creating innovative solutions to complex problems within my communities and beyond.
-                <hr />My goal is to leverage my skills and knowledge to contribute to impactful projects and make a positive difference in the technology industry and the world. As a former Division I athlete, I am well versed in team collaboration, leadership, and time management and bring a unique perspective to software engineering, combining my technical skills with the ability to work effectively in high-pressure environments.
+                I'm Bineta Diatta, a software engineer experienced in mobile, web and full stack development. With a strong foundation in computer science and software design principles, I am passionate about creating innovative solutions to complex problems within my communities and beyond.
+                <hr />My goal is to leverage my skills and knowledge to contribute to impactful projects and make a positive difference in the tech space and beyond.
+                As a former Division I athlete, I am well-versed in team collaboration, leadership, and time management and bring a unique perspective to software engineering—combining my technical skills with the ability to work effectively in high-pressure environments.
               </p>
               <div className="text-center px-5" style={{ maxWidth: '100%', overflow: 'hidden' }}>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: '700', marginBottom: '0.8rem', color: '#232323' }}>Education</h3>
